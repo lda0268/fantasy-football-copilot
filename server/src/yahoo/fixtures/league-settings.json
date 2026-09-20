@@ -9,6 +9,16 @@
       },
       {
         "settings": {
+          "draft_type": "live",
+          "scoring_type": "head",
+          "uses_playoff": "1",
+          "playoff_start_week": "15",
+          "num_playoff_teams": "6",
+          "waiver_type": "R",
+          "waiver_time": "2",
+          "uses_faab": "0",
+          "trade_end_date": "2026-11-18",
+          "trade_ratify_type": "commish",
           "roster_positions": {
             "0": { "roster_position": { "position": "QB", "count": 1 } },
             "1": { "roster_position": { "position": "WR", "count": 2 } },

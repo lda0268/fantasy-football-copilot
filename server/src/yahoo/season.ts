@@ -5,12 +5,13 @@ import { yahooGet } from "./client.js";
 import { isYahooApiError, YahooApiError, YahooErrorCode } from "./errors.js";
 import { parseYahooGames, selectActiveNflGame } from "./parsers/games.js";
 import { parseYahooLeagues, selectPrimaryLeague } from "./parsers/leagues.js";
+import { mergeLeagueSettings, parseLeagueSettings } from "./parsers/leagueSettings.js";
 import { parseRosterPositions } from "./parsers/rosterPositions.js";
 import { parseYahooMatchups, selectMatchupForTeam } from "./parsers/matchup.js";
 import { parseYahooAvailablePlayers } from "./parsers/players.js";
 import { parseRosterWeek, parseYahooRosterPlayers } from "./parsers/roster.js";
 import { parseYahooStandings } from "./parsers/standings.js";
-import { parseYahooTeam, parseYahooTeams } from "./parsers/team.js";
+import { leagueKeyFromTeamKey, parseYahooTeam, parseYahooTeams } from "./parsers/team.js";
 import {
   filterAvailablePlayers,
   paginatePlayers,
@@ -18,16 +19,19 @@ import {
 } from "./playerQuery.js";
 import {
   YAHOO_PLAYER_FILTER_COUNT_MAX,
+  assertSafeTeamKey,
   buildFreeAgentResource,
   buildLeagueSettingsResource,
   buildPlayerSearchResource,
   buildPlayersByStatusResource,
+  buildTeamRosterResource,
 } from "./resources.js";
 import { loadYahooTokens } from "./tokenStore.js";
 import type {
   YahooAvailablePlayer,
   YahooGame,
   YahooLeague,
+  YahooLeagueSettings,
   YahooMatchup,
   YahooRosterPlayer,
   YahooRosterPosition,
@@ -48,8 +52,27 @@ async function readFixture(fileName: string): Promise<unknown> {
   return JSON.parse(raw) as unknown;
 }
 
+async function readFixtureIfPresent(fileName: string): Promise<unknown | undefined> {
+  try {
+    return await readFixture(fileName);
+  } catch (error) {
+    if (isErrnoException(error) && error.code === "ENOENT") {
+      return undefined;
+    }
+    throw error;
+  }
+}
+
+function isErrnoException(error: unknown): error is NodeJS.ErrnoException {
+  return error instanceof Error && "code" in error;
+}
+
 function notFound(message: string): YahooApiError {
   return new YahooApiError(YahooErrorCode.HTTP_ERROR, message, { status: 404 });
+}
+
+function invalidRequest(message: string): YahooApiError {
+  return new YahooApiError(YahooErrorCode.INVALID_REQUEST, message, { status: 400 });
 }
 
 export async function getYahooStatus(): Promise<YahooStatus> {
@@ -114,26 +137,40 @@ export async function listYahooLeagues(): Promise<YahooLeague[]> {
 export async function getYahooLeagueSettings(): Promise<{
   league: YahooLeague;
   rosterPositions: YahooRosterPosition[];
+  settings: YahooLeagueSettings;
   source: "fixture" | "live";
 }> {
   const league = await requirePrimaryLeague();
   if (config.yahoo.fixtureMode) {
+    const settingsPayload = await readFixture("league-settings.json");
+    const parsedSettings = parseLeagueSettings(settingsPayload);
     const fromLeague = league.rosterPositions ?? [];
-    const fromSettingsFile = parseRosterPositions(await readFixture("league-settings.json"));
+    const fromSettingsFile = parsedSettings.rosterPositions ?? parseRosterPositions(settingsPayload);
     const rosterPositions = fromLeague.length > 0 ? fromLeague : fromSettingsFile;
+    const settings = mergeLeagueSettings(
+      {
+        ...parsedSettings,
+        scoringType: parsedSettings.scoringType ?? league.scoringType,
+      },
+      rosterPositions,
+    );
     return {
       league: { ...league, rosterPositions },
       rosterPositions,
+      settings,
       source: "fixture",
     };
   }
 
   const settingsPayload = await yahooGet(buildLeagueSettingsResource(league.leagueKey));
-  const fromSettings = parseRosterPositions(settingsPayload);
+  const parsedSettings = parseLeagueSettings(settingsPayload);
+  const fromSettings = parsedSettings.rosterPositions ?? parseRosterPositions(settingsPayload);
   const rosterPositions = fromSettings.length > 0 ? fromSettings : (league.rosterPositions ?? []);
+  const settings = mergeLeagueSettings(parsedSettings, rosterPositions);
   return {
     league: { ...league, rosterPositions },
     rosterPositions,
+    settings,
     source: "live",
   };
 }
@@ -160,7 +197,7 @@ export async function getYahooRoster(): Promise<YahooRoster> {
 
   const team = await discoverLiveUserTeam();
   const league = selectPrimaryLeague(await listYahooLeagues());
-  const rosterPayload = await yahooGet(`team/${team.teamKey}/roster`);
+  const rosterPayload = await yahooGet(buildTeamRosterResource(team.teamKey));
   return {
     team,
     week: parseRosterWeek(rosterPayload) ?? getCurrentLeagueWeek(league),
@@ -168,13 +205,71 @@ export async function getYahooRoster(): Promise<YahooRoster> {
   };
 }
 
+export async function getYahooTeamRoster(teamKey: string): Promise<YahooRoster> {
+  const safeKey = assertSafeTeamKey(teamKey);
+  const league = await requirePrimaryLeague();
+  if (leagueKeyFromTeamKey(safeKey) !== league.leagueKey) {
+    throw invalidRequest("Team is not in the current league.");
+  }
+
+  const { standings } = await getYahooStandings();
+  const standing = standings.find((row) => row.teamKey === safeKey);
+  if (!standing) {
+    throw notFound("No Yahoo roster was found for that team.");
+  }
+
+  const identity: YahooTeam = {
+    teamKey: standing.teamKey,
+    teamId: standing.teamId,
+    name: standing.name,
+    leagueKey: league.leagueKey,
+  };
+
+  if (config.yahoo.fixtureMode) {
+    const userTeam = await getYahooTeam();
+    const fileName = safeKey === userTeam.teamKey ? "roster.json" : `roster-${standing.teamId}.json`;
+    const rosterPayload = await readFixtureIfPresent(fileName);
+    if (!rosterPayload) {
+      throw notFound("No Yahoo roster was found for that team.");
+    }
+    return {
+      team: parseTeamIdentity(rosterPayload, identity),
+      week: parseRosterWeek(rosterPayload) ?? getCurrentLeagueWeek(league),
+      players: parseYahooRosterPlayers(rosterPayload),
+    };
+  }
+
+  const rosterPayload = await yahooGet(buildTeamRosterResource(safeKey));
+  return {
+    team: parseTeamIdentity(rosterPayload, identity),
+    week: parseRosterWeek(rosterPayload) ?? getCurrentLeagueWeek(league),
+    players: parseYahooRosterPlayers(rosterPayload),
+  };
+}
+
+function parseTeamIdentity(payload: unknown, fallback: YahooTeam): YahooTeam {
+  try {
+    return parseYahooTeam(payload);
+  } catch {
+    return fallback;
+  }
+}
+
 export async function getYahooMatchup(): Promise<YahooMatchup> {
   const team = await getYahooTeam();
+  const { matchups } = await listYahooMatchups();
+  return selectMatchupForTeam(matchups, team.teamKey);
+}
+
+export async function listYahooMatchups(): Promise<{ league: YahooLeague; matchups: YahooMatchup[] }> {
   const league = await requirePrimaryLeague();
   const payload = config.yahoo.fixtureMode
     ? await readFixture("scoreboard.json")
     : await yahooGet(scoreboardResource(league));
-  return selectMatchupForTeam(parseYahooMatchups(payload), team.teamKey);
+  return {
+    league,
+    matchups: parseYahooMatchups(payload),
+  };
 }
 
 export async function getYahooStandings(): Promise<{ league: YahooLeague; standings: YahooStanding[] }> {

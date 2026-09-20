@@ -138,8 +138,9 @@ describe("parseYahooLeagues", () => {
     const leagues = parseYahooLeagues(payload);
     assert.equal(leagues.length, 2);
     assert.equal(leagues[0].leagueKey, "999.l.123456");
-    assert.equal(leagues[0].numTeams, 12);
+    assert.equal(leagues[0].numTeams, 10);
     assert.equal(leagues[0].currentWeek, 2);
+    assert.equal(leagues[0].draftStatus, "postdraft");
     assert.deepEqual(leagues[0].rosterPositions, [
       { position: "QB", count: 1 },
       { position: "WR", count: 2 },

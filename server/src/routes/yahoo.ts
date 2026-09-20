@@ -2,14 +2,17 @@ import { Router, type Request, type Response } from "express";
 import { isYahooApiError, YahooErrorCode } from "../yahoo/errors.js";
 import {
   getYahooFreeAgents,
+  getYahooLeagueSettings,
   getYahooMatchup,
   getYahooPlayerSearch,
   getYahooRoster,
   getYahooStandings,
   getYahooStatus,
   getYahooTeam,
+  getYahooTeamRoster,
   listYahooGames,
   listYahooLeagues,
+  listYahooMatchups,
 } from "../yahoo/season.js";
 import { parsePlayerListQuery, parsePlayerSearchQuery } from "../yahoo/playerQuery.js";
 
@@ -102,9 +105,10 @@ yahooRouter.get("/team", async (_req: Request, res: Response) => {
   }
 });
 
-yahooRouter.get("/roster", async (_req: Request, res: Response) => {
+yahooRouter.get("/roster", async (req: Request, res: Response) => {
   try {
-    res.json(await getYahooRoster());
+    const teamKey = typeof req.query.teamKey === "string" ? req.query.teamKey : undefined;
+    res.json(teamKey ? await getYahooTeamRoster(teamKey) : await getYahooRoster());
   } catch (error) {
     sendYahooError(res, error);
   }
@@ -113,6 +117,22 @@ yahooRouter.get("/roster", async (_req: Request, res: Response) => {
 yahooRouter.get("/matchup", async (_req: Request, res: Response) => {
   try {
     res.json({ matchup: await getYahooMatchup() });
+  } catch (error) {
+    sendYahooError(res, error);
+  }
+});
+
+yahooRouter.get("/scoreboard", async (_req: Request, res: Response) => {
+  try {
+    res.json(await listYahooMatchups());
+  } catch (error) {
+    sendYahooError(res, error);
+  }
+});
+
+yahooRouter.get("/league-settings", async (_req: Request, res: Response) => {
+  try {
+    res.json(await getYahooLeagueSettings());
   } catch (error) {
     sendYahooError(res, error);
   }

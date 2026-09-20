@@ -24,7 +24,24 @@ export interface YahooLeague {
   startWeek?: number;
   endWeek?: number;
   scoringType?: string;
+  draftStatus?: string;
   url?: string;
+  rosterPositions?: YahooRosterPosition[];
+}
+
+export interface YahooLeagueSettings {
+  draftType?: string;
+  scoringType?: string;
+  waiverType?: string;
+  waiverRule?: string;
+  waiverTime?: string;
+  usesFaab?: boolean;
+  faabBudget?: number;
+  tradeEndDate?: string;
+  tradeRatifyType?: string;
+  usesPlayoff?: boolean;
+  playoffStartWeek?: number;
+  numPlayoffTeams?: number;
   rosterPositions?: YahooRosterPosition[];
 }
 

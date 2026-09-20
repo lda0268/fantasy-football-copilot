@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { YahooApiError, YahooErrorCode } from "./errors.js";
-import { assertSearchQuery, buildFreeAgentResource, buildLeagueSettingsResource, buildPlayerSearchResource, buildPlayersByStatusResource } from "./resources.js";
+import { assertSearchQuery, buildFreeAgentResource, buildLeagueSettingsResource, buildPlayerSearchResource, buildPlayersByStatusResource, buildTeamRosterResource } from "./resources.js";
 
 describe("Yahoo player resource builders", () => {
   it("encodes leagueKey, status=FA, start, and count", () => {
@@ -57,6 +57,14 @@ describe("Yahoo player resource builders", () => {
 
   it("builds a league settings resource from a safe league key", () => {
     assert.equal(buildLeagueSettingsResource("999.l.123456"), "league/999.l.123456/settings");
+  });
+
+  it("encodes a team roster resource and rejects unsafe team keys", () => {
+    assert.equal(buildTeamRosterResource("999.l.123456.t.2"), "team/999.l.123456.t.2/roster");
+    assert.throws(
+      () => buildTeamRosterResource("999.l.123456.t.2/roster;out=1"),
+      (error: unknown) => error instanceof YahooApiError && error.code === YahooErrorCode.INVALID_REQUEST,
+    );
   });
 
   it("rejects league keys and search values that could alter the resource path", () => {

@@ -9,6 +9,7 @@ export const YAHOO_PLAYER_FILTER_COUNT_MAX = 25;
 export const PLAYER_SEARCH_MAX_LENGTH = 64;
 
 const LEAGUE_KEY_PATTERN = /^\d+\.l\.\d+$/;
+const TEAM_KEY_PATTERN = /^\d+\.l\.\d+\.t\.\d+$/;
 const SEARCH_PATTERN = /^[A-Za-z0-9 .'-]+$/;
 
 export type LeaguePlayerFilters = {
@@ -29,6 +30,17 @@ export function assertSafeLeagueKey(leagueKey: string): string {
     throw invalidRequest("Yahoo league key is invalid.");
   }
   return leagueKey;
+}
+
+export function assertSafeTeamKey(teamKey: string): string {
+  if (!TEAM_KEY_PATTERN.test(teamKey)) {
+    throw invalidRequest("Yahoo team key is invalid.");
+  }
+  return teamKey;
+}
+
+export function buildTeamRosterResource(teamKey: string): string {
+  return `team/${assertSafeTeamKey(teamKey)}/roster`;
 }
 
 function encodeFilterValue(value: string): string {

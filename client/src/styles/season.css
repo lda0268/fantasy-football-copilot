@@ -55,6 +55,10 @@ body,
   border-right: 1px solid var(--season-border);
   background: #0e1626;
   padding: 16px 14px;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  min-height: 100vh;
 }
 
 .season-brand-kicker {
@@ -1108,4 +1112,44 @@ body,
   .move-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.league-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.league-overview li {
+  background: var(--season-bg);
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.league-lineup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.league-lineup li {
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: #132038;
+}
+
+.league-page .panel-card h3 {
+  margin: 12px 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #b9c6d9;
 }

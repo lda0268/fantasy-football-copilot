@@ -20,6 +20,7 @@ export type YahooLeague = {
   numTeams?: number;
   currentWeek?: number;
   scoringType?: string;
+  draftStatus?: string;
 };
 
 export type YahooTeam = {
@@ -36,6 +37,8 @@ export type YahooRosterPlayer = {
   editorialTeamAbbr?: string;
   displayPosition?: string;
   selectedPosition?: string;
+  status?: string;
+  statusFull?: string;
   byeWeek?: number;
 };
 
@@ -53,8 +56,26 @@ export type YahooStanding = {
   wins: number;
   losses: number;
   ties: number;
+  percentage?: number;
   pointsFor?: number;
   pointsAgainst?: number;
+  streak?: string;
+};
+
+export type YahooLeagueSettings = {
+  draftType?: string;
+  scoringType?: string;
+  waiverType?: string;
+  waiverRule?: string;
+  waiverTime?: string;
+  usesFaab?: boolean;
+  faabBudget?: number;
+  tradeEndDate?: string;
+  tradeRatifyType?: string;
+  usesPlayoff?: boolean;
+  playoffStartWeek?: number;
+  numPlayoffTeams?: number;
+  rosterPositions?: YahooRosterPosition[];
 };
 
 export type YahooMatchupTeam = {

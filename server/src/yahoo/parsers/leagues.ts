@@ -44,6 +44,10 @@ function normalizeLeague(block: Record<string, unknown>, index: number): YahooLe
   if (scoringType !== undefined) {
     league.scoringType = scoringType;
   }
+  const draftStatus = readString(block.draft_status);
+  if (draftStatus !== undefined) {
+    league.draftStatus = draftStatus;
+  }
   const url = readString(block.url);
   if (url !== undefined) {
     league.url = url;

@@ -1,0 +1,87 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic other-team roster. Players and IDs are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/team/999.l.123456.t.2/roster",
+    "team": [
+      {
+        "team_key": "999.l.123456.t.2",
+        "team_id": "2",
+        "name": "Fourth Down Labs"
+      },
+      {
+        "roster": {
+          "coverage_type": "week",
+          "week": "2",
+          "is_editable": 0,
+          "0": {
+            "players": {
+              "0": {
+                "player": [
+                  {
+                    "player_key": "999.p.3101",
+                    "player_id": "3101",
+                    "name": { "full": "Nell Voss", "first": "Nell", "last": "Voss" },
+                    "editorial_team_abbr": "GB",
+                    "display_position": "QB",
+                    "eligible_positions": [{ "position": "QB" }],
+                    "bye_weeks": { "week": "10" }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "QB"
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "player": [
+                  {
+                    "player_key": "999.p.3102",
+                    "player_id": "3102",
+                    "name": { "full": "Wynn O’Connell", "first": "Wynn", "last": "O’Connell" },
+                    "editorial_team_abbr": "WAS",
+                    "display_position": "TE",
+                    "eligible_positions": [{ "position": "TE" }],
+                    "bye_weeks": { "week": "14" }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "TE"
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "player": [
+                  {
+                    "player_key": "999.p.3103",
+                    "player_id": "3103",
+                    "name": { "full": "Ivo Marsh", "first": "Ivo", "last": "Marsh" },
+                    "editorial_team_abbr": "CHI",
+                    "display_position": "RB",
+                    "eligible_positions": [{ "position": "RB" }],
+                    "status": "O",
+                    "status_full": "Out"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "count": 3
+            }
+          }
+        }
+      }
+    ]
+  }
+}

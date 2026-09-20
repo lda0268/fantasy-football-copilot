@@ -9,6 +9,8 @@ import type {
   YahooStanding,
   YahooStatus,
   YahooTeam,
+  YahooLeagueSettings,
+  YahooRosterPosition,
   StartSitResult,
 } from "./types";
 
@@ -28,8 +30,9 @@ export function getYahooTeam(): Promise<{ team: YahooTeam }> {
   return requestJson<{ team: YahooTeam }>("/api/yahoo/team");
 }
 
-export function getYahooRoster(): Promise<YahooRoster> {
-  return requestJson<YahooRoster>("/api/yahoo/roster");
+export function getYahooRoster(teamKey?: string): Promise<YahooRoster> {
+  const query = teamKey ? `?teamKey=${encodeURIComponent(teamKey)}` : "";
+  return requestJson<YahooRoster>(`/api/yahoo/roster${query}`);
 }
 
 export function getYahooStandings(): Promise<{ league: YahooLeague; standings: YahooStanding[] }> {
@@ -38,6 +41,19 @@ export function getYahooStandings(): Promise<{ league: YahooLeague; standings: Y
 
 export function getYahooMatchup(): Promise<{ matchup: YahooMatchup }> {
   return requestJson<{ matchup: YahooMatchup }>("/api/yahoo/matchup");
+}
+
+export function getYahooScoreboard(): Promise<{ matchups: YahooMatchup[] }> {
+  return requestJson<{ matchups: YahooMatchup[] }>("/api/yahoo/scoreboard");
+}
+
+export function getYahooLeagueSettings(): Promise<{
+  league: YahooLeague;
+  rosterPositions: YahooRosterPosition[];
+  settings: YahooLeagueSettings;
+  source: "fixture" | "live";
+}> {
+  return requestJson("/api/yahoo/league-settings");
 }
 
 export function getPlayerIntelligence(): Promise<{ players: PlayerIntelligence[] }> {
