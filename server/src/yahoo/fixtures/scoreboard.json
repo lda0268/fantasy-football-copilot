@@ -1,0 +1,164 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped scoreboard. Teams and scores are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/league/999.l.123456/scoreboard;week=2",
+    "league": [
+      {
+        "league_key": "999.l.123456",
+        "league_id": "123456",
+        "name": "Co-Pilot Test League",
+        "season": "2026",
+        "current_week": 2,
+        "scoring_type": "head"
+      },
+      {
+        "scoreboard": {
+          "week": "2",
+          "0": {
+            "matchups": {
+              "0": {
+                "matchup": [
+                  {
+                    "week": "2",
+                    "status": "midevent",
+                    "is_playoffs": "0",
+                    "is_consolation": "0",
+                    "is_tied": "0",
+                    "is_matchup_recap_available": "0"
+                  },
+                  {
+                    "0": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.3",
+                          "team_id": "3",
+                          "name": "Gridiron Gremlins"
+                        },
+                        {
+                          "team_points": { "coverage_type": "week", "week": "2", "total": "64.10" },
+                          "team_projected_points": { "total": "118.40" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "0", "losses": "1", "ties": "0" }
+                          }
+                        }
+                      ]
+                    },
+                    "1": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.4",
+                          "team_id": "4",
+                          "name": "Red Zone Robots"
+                        },
+                        {
+                          "team_points": { "coverage_type": "week", "week": "2", "total": "71.25" },
+                          "team_projected_points": { "total": "119.80" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "1", "losses": "0", "ties": "0" }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "matchup": [
+                  {
+                    "week": "2",
+                    "status": "midevent",
+                    "is_playoffs": "0",
+                    "is_consolation": "0",
+                    "is_tied": "0"
+                  },
+                  {
+                    "0": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.1",
+                          "team_id": "1",
+                          "name": "Co-Pilot Test Team"
+                        },
+                        {
+                          "team_points": { "coverage_type": "week", "week": "2", "total": "87.42" },
+                          "team_projected_points": { "coverage_type": "week", "week": "2", "total": "126.55" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "1", "losses": "0", "ties": "0" }
+                          }
+                        }
+                      ]
+                    },
+                    "1": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.2",
+                          "team_id": "2",
+                          "name": "Fourth Down Labs"
+                        },
+                        {
+                          "team_points": { "coverage_type": "week", "week": "2", "total": "81.18" },
+                          "team_projected_points": { "total": "121.30" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "0", "losses": "1", "ties": "0" }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "matchup": [
+                  {
+                    "week": "2",
+                    "status": "midevent",
+                    "is_playoffs": "0",
+                    "is_consolation": "0",
+                    "is_tied": "0",
+                    "unexpected_yahoo_field": { "nested": true }
+                  },
+                  {
+                    "0": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.5",
+                          "team_id": "5",
+                          "name": "Blitz Byte"
+                        },
+                        {
+                          "team_points": { "total": "55.00" },
+                          "team_projected_points": { "total": "110.00" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "0", "losses": "1", "ties": "0" }
+                          }
+                        }
+                      ]
+                    },
+                    "1": {
+                      "team": [
+                        {
+                          "team_key": "999.l.123456.t.6",
+                          "team_id": "6",
+                          "name": "Pocket Passers"
+                        },
+                        {
+                          "team_points": { "total": "90.05" },
+                          "team_projected_points": { "total": "124.10" },
+                          "team_standings": {
+                            "outcome_totals": { "wins": "1", "losses": "0", "ties": "0" }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "count": 3
+            }
+          }
+        }
+      }
+    ]
+  }
+}

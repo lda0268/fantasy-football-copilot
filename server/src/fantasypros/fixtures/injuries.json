@@ -1,0 +1,38 @@
+{
+  "sport": "NFL",
+  "count": 3,
+  "injuries": [
+    {
+      "player_id": 90008,
+      "yahoo_id": "1010",
+      "name": "Quinn Mercer",
+      "team_id": "NYG",
+      "position_id": "WR",
+      "status": "Questionable",
+      "status_short": "Q",
+      "injury_type": "Ankle",
+      "practice_1": "Limit",
+      "practice_2": "Limit",
+      "practice_3": "Full",
+      "injury_update_date": "2026-09-16",
+      "probability_of_playing": "0.64000",
+      "comment": "Synthetic fixture only."
+    },
+    {
+      "player_id": 90003,
+      "name": "Theo Banks",
+      "team_id": "KC",
+      "position_id": "RB",
+      "status": "IR",
+      "status_short": "IR",
+      "injury_type": "Knee",
+      "practice_3": "DNP",
+      "injury_update_date": "2026-09-14"
+    },
+    {
+      "name": "Unidentified Practice Report",
+      "status": "Questionable",
+      "practice_1": "DNP"
+    }
+  ]
+}

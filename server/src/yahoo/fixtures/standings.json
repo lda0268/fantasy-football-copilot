@@ -1,0 +1,260 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped standings. Teams and records are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/league/999.l.123456/standings",
+    "league": [
+      {
+        "league_key": "999.l.123456",
+        "league_id": "123456",
+        "name": "Co-Pilot Test League",
+        "season": "2026",
+        "num_teams": 10,
+        "current_week": 2,
+        "scoring_type": "head"
+      },
+      {
+        "standings": {
+          "0": {
+            "teams": {
+              "0": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.6",
+                    "team_id": "6",
+                    "name": "Pocket Passers"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "1",
+                      "playoff_seed": "1",
+                      "outcome_totals": {
+                        "wins": "1",
+                        "losses": "0",
+                        "ties": "0",
+                        "percentage": "1.000"
+                      },
+                      "points_for": "142.80",
+                      "points_against": "101.20",
+                      "streak": { "type": "win", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.4",
+                    "team_id": "4",
+                    "name": "Red Zone Robots"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "2",
+                      "playoff_seed": "2",
+                      "outcome_totals": {
+                        "wins": "1",
+                        "losses": "0",
+                        "ties": "0",
+                        "percentage": "1.000"
+                      },
+                      "points_for": "138.40",
+                      "points_against": "109.15",
+                      "streak": { "type": "win", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.1",
+                    "team_id": "1",
+                    "name": "Co-Pilot Test Team"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "3",
+                      "playoff_seed": "3",
+                      "outcome_totals": {
+                        "wins": "1",
+                        "losses": "0",
+                        "ties": "0",
+                        "percentage": "1.000"
+                      },
+                      "points_for": "131.90",
+                      "points_against": "118.40",
+                      "streak": { "type": "win", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "3": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.8",
+                    "team_id": "8",
+                    "name": "Audible Algorithms"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "4",
+                      "outcome_totals": {
+                        "wins": "1",
+                        "losses": "0",
+                        "ties": "0",
+                        "percentage": "1.000"
+                      },
+                      "points_for": "125.05",
+                      "points_against": "120.00",
+                      "streak": "W1"
+                    }
+                  }
+                ]
+              },
+              "4": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.10",
+                    "team_id": "10",
+                    "name": "Checkdown Collective"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "5",
+                      "outcome_totals": {
+                        "wins": "1",
+                        "losses": "0",
+                        "ties": "0",
+                        "percentage": "1.000"
+                      },
+                      "points_for": "119.60",
+                      "points_against": "117.10",
+                      "streak": { "type": "win", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "5": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.9",
+                    "team_id": "9",
+                    "name": "Screen Play Studio"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "6",
+                      "outcome_totals": {
+                        "wins": "0",
+                        "losses": "1",
+                        "ties": "0",
+                        "percentage": "0.000"
+                      },
+                      "points_for": "117.10",
+                      "points_against": "119.60",
+                      "streak": { "type": "loss", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "6": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.2",
+                    "team_id": "2",
+                    "name": "Fourth Down Labs"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "7",
+                      "outcome_totals": {
+                        "wins": "0",
+                        "losses": "1",
+                        "ties": "0",
+                        "percentage": "0.000"
+                      },
+                      "points_for": "118.40",
+                      "points_against": "131.90",
+                      "streak": { "type": "loss", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "7": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.7",
+                    "team_id": "7",
+                    "name": "Coverage Cloud"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "8",
+                      "outcome_totals": {
+                        "wins": "0",
+                        "losses": "1",
+                        "ties": "0",
+                        "percentage": "0.000"
+                      },
+                      "points_for": "120.00",
+                      "points_against": "125.05",
+                      "streak": "L1"
+                    }
+                  }
+                ]
+              },
+              "8": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.3",
+                    "team_id": "3",
+                    "name": "Gridiron Gremlins"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": "9",
+                      "outcome_totals": {
+                        "wins": "0",
+                        "losses": "1",
+                        "ties": "0",
+                        "percentage": "0.000"
+                      },
+                      "points_for": "109.15",
+                      "points_against": "138.40",
+                      "streak": { "type": "loss", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "9": {
+                "team": [
+                  {
+                    "team_key": "999.l.123456.t.5",
+                    "team_id": "5",
+                    "name": "Blitz Byte"
+                  },
+                  {
+                    "team_standings": {
+                      "rank": 10,
+                      "outcome_totals": {
+                        "wins": "0",
+                        "losses": "1",
+                        "ties": "0",
+                        "percentage": "0.000"
+                      },
+                      "points_for": "101.20",
+                      "points_against": "142.80",
+                      "streak": { "type": "loss", "value": "1" }
+                    }
+                  }
+                ]
+              },
+              "count": 10
+            }
+          }
+        }
+      }
+    ]
+  }
+}

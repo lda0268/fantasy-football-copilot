@@ -1,0 +1,262 @@
+{
+  "_fixture": "Synthetic FantasyPros-shaped weekly projections. Names are fictional.",
+  "season": "2026",
+  "week": "2",
+  "count": "15",
+  "positions": "QB,RB,WR,TE,DST,K",
+  "scoring": "HALF",
+  "players": [
+    {
+      "fpid": 90001,
+      "mflid": null,
+      "name": "Rex Calder",
+      "position_id": "QB",
+      "team_id": "BUF",
+      "filename": "Rex Calder.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 22.4,
+        "points_ppr": 22.4,
+        "points_half": 22.4,
+        "pass_yds": 268.5,
+        "pass_tds": 2.1,
+        "pass_ints": 0.6,
+        "rush_yds": 12,
+        "rush_tds": 0.1
+      }
+    },
+    {
+      "fpid": 90002,
+      "mflid": null,
+      "name": "Milo Grant",
+      "position_id": "RB",
+      "team_id": "DET",
+      "filename": "Milo Grant.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 14.2,
+        "points_ppr": 17.8,
+        "points_half": 16,
+        "rush_yds": 82.4,
+        "rush_tds": 0.7,
+        "rec_rec": 3.6,
+        "rec_yds": 28.1,
+        "rec_tds": 0.1
+      }
+    },
+    {
+      "fpid": 90003,
+      "mflid": null,
+      "name": "Theo Banks",
+      "position_id": "RB",
+      "team_id": "KC",
+      "filename": "Theo Banks.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 11.8,
+        "points_ppr": 14.6,
+        "points_half": 13.2,
+        "rush_yds": 64,
+        "rush_tds": 0.5,
+        "rec_rec": 2.8,
+        "rec_yds": 18,
+        "rec_tds": 0
+      }
+    },
+    {
+      "fpid": 90004,
+      "mflid": null,
+      "name": "Nash Ellison",
+      "position_id": "WR",
+      "team_id": "MIA",
+      "filename": "Nash Ellison.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 12.55,
+        "points_ppr": 19.05,
+        "points_half": 15.8,
+        "rec_rec": 6.5,
+        "rec_yds": 88.2,
+        "rec_tds": 0.6
+      }
+    },
+    {
+      "fpid": 90005,
+      "mflid": null,
+      "name": "Priya Cole",
+      "position_id": "WR",
+      "team_id": "SF",
+      "filename": "Priya Cole.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 10.1,
+        "points_ppr": 16.4,
+        "points_half": 13.25,
+        "rec_rec": 6.3,
+        "rec_yds": 74,
+        "rec_tds": 0.4
+      }
+    },
+    {
+      "fpid": 90006,
+      "mflid": null,
+      "name": "Ellis Ward",
+      "position_id": "TE",
+      "team_id": "BAL",
+      "filename": "Ellis Ward.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 8.4,
+        "points_ppr": 13.2,
+        "points_half": 10.8,
+        "rec_rec": 4.8,
+        "rec_yds": 52,
+        "rec_tds": 0.5
+      }
+    },
+    {
+      "fpid": 90007,
+      "mflid": null,
+      "name": "Devon Hart",
+      "position_id": "WR",
+      "team_id": "CIN",
+      "filename": "Devon Hart.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 9.2,
+        "points_ppr": 14.9,
+        "points_half": 12.05,
+        "rec_rec": 5.7,
+        "rec_yds": 71.3,
+        "rec_tds": 0.3
+      }
+    },
+    {
+      "fpid": 90008,
+      "mflid": null,
+      "name": "Quinn Mercer",
+      "position_id": "WR",
+      "team_id": "NYG",
+      "filename": "Quinn Mercer.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 6.1,
+        "points_ppr": 10.4,
+        "points_half": 8.25,
+        "rec_rec": 4.3,
+        "rec_yds": 48,
+        "rec_tds": 0.2
+      }
+    },
+    {
+      "fpid": 90009,
+      "mflid": null,
+      "name": "Jonah Pike",
+      "position_id": "K",
+      "team_id": "GB",
+      "filename": "Jonah Pike.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 8.5,
+        "points_half": 8.5,
+        "points_ppr": 8.5
+      }
+    },
+    {
+      "fpid": 90010,
+      "mflid": null,
+      "name": "Harbor City",
+      "position_id": "DST",
+      "team_id": "HC",
+      "filename": "Harbor City.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 7,
+        "points_half": 7,
+        "points_ppr": 7
+      }
+    },
+    {
+      "fpid": 90011,
+      "mflid": null,
+      "name": "Nico Vale",
+      "position_id": "RB",
+      "team_id": "CHI",
+      "filename": "Nico Vale.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 9.8,
+        "points_ppr": 11.4,
+        "points_half": 10.6,
+        "rush_yds": 55,
+        "rush_tds": 0.4,
+        "rec_rec": 1.6,
+        "rec_yds": 11,
+        "rec_tds": 0
+      }
+    },
+    {
+      "fpid": 90012,
+      "mflid": null,
+      "name": "Joss Hale",
+      "position_id": "QB",
+      "team_id": "DEN",
+      "filename": "Joss Hale.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 18.44,
+        "points_half": 18.44,
+        "points_ppr": 18.44,
+        "pass_yds": 245,
+        "pass_tds": 1.6,
+        "pass_ints": 0.7
+      }
+    },
+    {
+      "fpid": 90013,
+      "mflid": null,
+      "name": "Ellis Prado",
+      "position_id": "WR",
+      "team_id": "SEA",
+      "filename": "Ellis Prado.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 7.4,
+        "points_ppr": 12.05,
+        "points_half": 9.7,
+        "rec_rec": 4.65,
+        "rec_yds": 61,
+        "rec_tds": 0.2
+      }
+    },
+    {
+      "fpid": 90014,
+      "mflid": null,
+      "name": "Zero Proj",
+      "position_id": "RB",
+      "team_id": "FA",
+      "filename": "Zero Proj.php",
+      "extra_meta": true,
+      "stats": {
+        "points": 0,
+        "points_ppr": "0.0",
+        "points_half": "0.00",
+        "rush_yds": 0,
+        "rush_tds": 0,
+        "rec_rec": 0,
+        "rec_yds": 0,
+        "rec_tds": 0
+      }
+    },
+    {
+      "fpid": 90016,
+      "mflid": null,
+      "name": "Bare Projection",
+      "position_id": "TE",
+      "team_id": "WAS",
+      "filename": "Bare Projection.php",
+      "extra_meta": true,
+      "stats": {}
+    }
+  ]
+}

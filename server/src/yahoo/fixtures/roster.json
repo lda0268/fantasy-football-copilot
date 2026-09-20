@@ -1,0 +1,577 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped roster payload. Players and IDs are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/team/999.l.123456.t.1/roster",
+    "team": [
+      {
+        "team_key": "999.l.123456.t.1",
+        "team_id": "1",
+        "name": "Co-Pilot Test Team"
+      },
+      {
+        "roster": {
+          "coverage_type": "week",
+          "week": "2",
+          "is_editable": 1,
+          "0": {
+            "players": {
+              "0": {
+                "player": [
+                  {
+                    "player_key": "999.p.1001",
+                    "player_id": "1001",
+                    "name": {
+                      "full": "Rex Calder",
+                      "first": "Rex",
+                      "last": "Calder"
+                    },
+                    "editorial_team_abbr": "BUF",
+                    "display_position": "QB",
+                    "eligible_positions": [
+                      {
+                        "position": "QB"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "12"
+                    },
+                    "uniform_number": "17",
+                    "image_url": "https://example.invalid/players/rex-calder.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "QB"
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "player": [
+                  {
+                    "player_key": "999.p.1002",
+                    "player_id": "1002",
+                    "name": {
+                      "full": "Milo Grant",
+                      "first": "Milo",
+                      "last": "Grant"
+                    },
+                    "editorial_team_abbr": "DET",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "5"
+                    },
+                    "uniform_number": "26",
+                    "image_url": "https://example.invalid/players/milo-grant.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "RB"
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "player": [
+                  {
+                    "player_key": "999.p.1003",
+                    "player_id": "1003",
+                    "name": {
+                      "full": "Theo Banks",
+                      "first": "Theo",
+                      "last": "Banks"
+                    },
+                    "editorial_team_abbr": "ATL",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "8"
+                    },
+                    "uniform_number": "7",
+                    "image_url": "https://example.invalid/players/theo-banks.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "RB"
+                    }
+                  }
+                ]
+              },
+              "3": {
+                "player": [
+                  {
+                    "player_key": "999.p.1004",
+                    "player_id": "1004",
+                    "name": {
+                      "full": "Nash Ellison",
+                      "first": "Nash",
+                      "last": "Ellison"
+                    },
+                    "editorial_team_abbr": "CIN",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    },
+                    "uniform_number": "1",
+                    "image_url": "https://example.invalid/players/nash-ellison.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "WR"
+                    }
+                  }
+                ]
+              },
+              "4": {
+                "player": [
+                  {
+                    "player_key": "999.p.1005",
+                    "player_id": "1005",
+                    "name": {
+                      "full": "Priya Cole",
+                      "first": "Priya",
+                      "last": "Cole"
+                    },
+                    "editorial_team_abbr": "MIN",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "6"
+                    },
+                    "uniform_number": "18",
+                    "image_url": "https://example.invalid/players/priya-cole.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "WR"
+                    }
+                  }
+                ]
+              },
+              "5": {
+                "player": [
+                  {
+                    "player_key": "999.p.1006",
+                    "player_id": "1006",
+                    "name": {
+                      "full": "Ellis Ward",
+                      "first": "Ellis",
+                      "last": "Ward"
+                    },
+                    "editorial_team_abbr": "BAL",
+                    "display_position": "TE",
+                    "eligible_positions": [
+                      {
+                        "position": "TE"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "7"
+                    },
+                    "uniform_number": "89",
+                    "image_url": "https://example.invalid/players/ellis-ward.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "TE"
+                    }
+                  }
+                ]
+              },
+              "6": {
+                "player": [
+                  {
+                    "player_key": "999.p.1007",
+                    "player_id": "1007",
+                    "name": {
+                      "full": "Devon Hart",
+                      "first": "Devon",
+                      "last": "Hart"
+                    },
+                    "editorial_team_abbr": "SEA",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "8"
+                    },
+                    "uniform_number": "14",
+                    "image_url": "https://example.invalid/players/devon-hart.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "W/R/T"
+                    }
+                  }
+                ]
+              },
+              "7": {
+                "player": [
+                  {
+                    "player_key": "999.p.1008",
+                    "player_id": "1008",
+                    "name": {
+                      "full": "Jonah Pike",
+                      "first": "Jonah",
+                      "last": "Pike"
+                    },
+                    "editorial_team_abbr": "KC",
+                    "display_position": "K",
+                    "eligible_positions": [
+                      {
+                        "position": "K"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    },
+                    "uniform_number": "7",
+                    "image_url": "https://example.invalid/players/jonah-pike.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "K"
+                    }
+                  }
+                ]
+              },
+              "8": {
+                "player": [
+                  {
+                    "player_key": "999.p.1009",
+                    "player_id": "1009",
+                    "name": {
+                      "full": "Harbor City",
+                      "first": "Harbor",
+                      "last": "City"
+                    },
+                    "editorial_team_abbr": "SF",
+                    "display_position": "DEF",
+                    "eligible_positions": [
+                      {
+                        "position": "DEF"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "9"
+                    },
+                    "image_url": "https://example.invalid/players/harbor-city.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "DEF"
+                    }
+                  }
+                ]
+              },
+              "9": {
+                "player": [
+                  {
+                    "player_key": "999.p.1010",
+                    "player_id": "1010",
+                    "name": {
+                      "full": "Quinn Mercer",
+                      "first": "Quinn",
+                      "last": "Mercer"
+                    },
+                    "editorial_team_abbr": "GB",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "5"
+                    },
+                    "uniform_number": "9",
+                    "image_url": "https://example.invalid/players/quinn-mercer.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "10": {
+                "player": [
+                  {
+                    "player_key": "999.p.1011",
+                    "player_id": "1011",
+                    "name": {
+                      "full": "Harper Dillon",
+                      "first": "Harper",
+                      "last": "Dillon"
+                    },
+                    "editorial_team_abbr": "PHI",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "5"
+                    },
+                    "uniform_number": "26",
+                    "image_url": "https://example.invalid/players/harper-dillon.png",
+                    "status": "Q",
+                    "status_full": "Questionable"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "11": {
+                "player": [
+                  {
+                    "player_key": "999.p.1012",
+                    "player_id": "1012",
+                    "name": {
+                      "full": "Cade Rowan",
+                      "first": "Cade",
+                      "last": "Rowan"
+                    },
+                    "editorial_team_abbr": "LAC",
+                    "display_position": "QB",
+                    "eligible_positions": [
+                      {
+                        "position": "QB"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "5"
+                    },
+                    "uniform_number": "10",
+                    "image_url": "https://example.invalid/players/cade-rowan.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "12": {
+                "player": [
+                  {
+                    "player_key": "999.p.1013",
+                    "player_id": "1013",
+                    "name": {
+                      "full": "Simone Blake",
+                      "first": "Simone",
+                      "last": "Blake"
+                    },
+                    "editorial_team_abbr": "TB",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "9"
+                    },
+                    "uniform_number": "13",
+                    "image_url": "https://example.invalid/players/simone-blake.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "13": {
+                "player": [
+                  {
+                    "player_key": "999.p.1014",
+                    "player_id": "1014",
+                    "name": {
+                      "full": "Omar Voss Jr.",
+                      "first": "Omar",
+                      "last": "Voss Jr."
+                    },
+                    "editorial_team_abbr": "DAL",
+                    "display_position": "TE",
+                    "eligible_positions": [
+                      {
+                        "position": "TE"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "7"
+                    },
+                    "uniform_number": "87",
+                    "image_url": "https://example.invalid/players/omar-voss.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "14": {
+                "player": [
+                  {
+                    "player_key": "999.p.1015",
+                    "player_id": "1015",
+                    "name": {
+                      "full": "Riley Cho",
+                      "first": "Riley",
+                      "last": "Cho"
+                    },
+                    "editorial_team_abbr": "CHI",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "7"
+                    },
+                    "uniform_number": "23",
+                    "image_url": "https://example.invalid/players/riley-cho.png"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "15": {
+                "player": [
+                  {
+                    "player_key": "999.p.1016",
+                    "player_id": "1016",
+                    "name": {
+                      "full": "Maren Solis",
+                      "first": "Maren",
+                      "last": "Solis"
+                    },
+                    "editorial_team_abbr": "NO",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "12"
+                    },
+                    "uniform_number": "12",
+                    "image_url": "https://example.invalid/players/maren-solis.png",
+                    "status": "IR",
+                    "status_full": "Injured Reserve"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "IR"
+                    }
+                  }
+                ]
+              },
+              "count": 16
+            }
+          }
+        }
+      }
+    ]
+  }
+}

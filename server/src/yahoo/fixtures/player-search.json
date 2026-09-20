@@ -1,0 +1,354 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped player collection. Names and IDs are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/league/999.l.123456/players;search=vale;start=0;count=25",
+    "league": [
+      {
+        "league_key": "999.l.123456",
+        "league_id": "123456",
+        "name": "Co-Pilot Test League",
+        "season": "2026",
+        "current_week": 2
+      },
+      {
+        "players": {
+          "0": {
+            "player": [
+              {
+                "player_key": "999.p.2004",
+                "player_id": "2004",
+                "name": {
+                  "full": "Nico Vale",
+                  "first": "Nico",
+                  "last": "Vale"
+                },
+                "editorial_team_abbr": "CHI",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "7"
+                },
+                "uniform_number": "23"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "12.50"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "9.80"
+                },
+                "player_projected_points": {
+                  "total": "11.40"
+                }
+              }
+            ]
+          },
+          "1": {
+            "player": [
+              {
+                "player_key": "999.p.2030",
+                "player_id": "2030",
+                "name": {
+                  "full": "Remy Holt",
+                  "first": "Remy",
+                  "last": "Holt"
+                },
+                "editorial_team_abbr": "DAL",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "status": "Q",
+                "status_full": "Questionable",
+                "bye_weeks": {
+                  "week": "7"
+                },
+                "uniform_number": "88"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "W"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "18.90"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "13.55"
+                },
+                "player_projected_points": {
+                  "total": "14.20"
+                }
+              }
+            ]
+          },
+          "2": {
+            "player": [
+              {
+                "player_key": "999.p.1001",
+                "player_id": "1001",
+                "name": {
+                  "full": "Rex Calder",
+                  "first": "Rex",
+                  "last": "Calder"
+                },
+                "editorial_team_abbr": "BUF",
+                "display_position": "QB",
+                "eligible_positions": [
+                  {
+                    "position": "QB"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "12"
+                },
+                "uniform_number": "17",
+                "image_url": "https://example.invalid/players/rex-calder.png"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "team",
+                  "owner_team_key": "999.l.123456.t.1",
+                  "owner_team_name": "Co-Pilot Test Team"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "98.40"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "24.10"
+                },
+                "player_projected_points": {
+                  "total": "22.80"
+                }
+              }
+            ]
+          },
+          "3": {
+            "player": [
+              {
+                "player_key": "999.p.2008",
+                "player_id": "2008",
+                "name": {
+                  "full": "Ellis Prado",
+                  "first": "Ellis",
+                  "last": "Prado"
+                },
+                "editorial_team_abbr": "SEA",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "8"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "9.40"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "11.22"
+                },
+                "player_projected_points": {
+                  "total": "12.05"
+                }
+              }
+            ]
+          },
+          "4": {
+            "player": [
+              {
+                "player_key": "999.p.2001",
+                "player_id": "2001",
+                "name": {
+                  "full": "Joss Hale",
+                  "first": "Joss",
+                  "last": "Hale"
+                },
+                "editorial_team_abbr": "DEN",
+                "display_position": "QB",
+                "eligible_positions": [
+                  {
+                    "position": "QB"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "8"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "4.20"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "18.44"
+                }
+              }
+            ]
+          },
+          "5": {
+            "player": [
+              {
+                "player_key": "999.p.2005",
+                "player_id": "2005",
+                "name": {
+                  "full": "Bram Colter",
+                  "first": "Bram",
+                  "last": "Colter"
+                },
+                "editorial_team_abbr": "ATL",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "8.10"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "6.30"
+                }
+              }
+            ]
+          },
+          "6": {
+            "player": [
+              {
+                "player_key": "999.p.2019",
+                "player_id": "2019",
+                "name": {
+                  "full": "Harbor City",
+                  "first": "Harbor",
+                  "last": "City"
+                },
+                "editorial_team_abbr": "HC",
+                "display_position": "DEF",
+                "eligible_positions": [
+                  {
+                    "position": "DEF"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "11.60"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "12.00"
+                }
+              }
+            ]
+          },
+          "7": {
+            "player": [
+              {
+                "player_key": "999.p.2031",
+                "player_id": "2031",
+                "name": {
+                  "full": "Veda Moss",
+                  "first": "Veda",
+                  "last": "Moss"
+                },
+                "editorial_team_abbr": "SF",
+                "display_position": "TE",
+                "eligible_positions": [
+                  {
+                    "position": "TE"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "9"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "W"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.00"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "0.00"
+                },
+                "player_projected_points": {
+                  "total": "5.40"
+                }
+              }
+            ]
+          },
+          "count": 8
+        }
+      }
+    ]
+  }
+}

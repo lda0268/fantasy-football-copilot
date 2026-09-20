@@ -1,0 +1,74 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped team payload. Not a real Yahoo team key.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/users;use_login=1/games;game_keys=999/leagues;league_keys=999.l.123456/teams",
+    "users": {
+      "0": {
+        "user": [
+          { "guid": "fixture-user-guid" },
+          {
+            "games": {
+              "0": {
+                "game": [
+                  {
+                    "game_key": "999",
+                    "game_id": "999",
+                    "name": "Football",
+                    "code": "nfl",
+                    "season": "2026"
+                  },
+                  {
+                    "leagues": {
+                      "0": {
+                        "league": [
+                          {
+                            "league_key": "999.l.123456",
+                            "league_id": "123456",
+                            "name": "Co-Pilot Test League",
+                            "season": "2026",
+                            "current_week": 2
+                          },
+                          {
+                            "teams": {
+                              "0": {
+                                "team": [
+                                  {
+                                    "team_key": "999.l.123456.t.1",
+                                    "team_id": "1",
+                                    "name": "Co-Pilot Test Team",
+                                    "url": "https://example.invalid/team/1",
+                                    "number_of_moves": "3",
+                                    "number_of_trades": 0,
+                                    "team_logos": {
+                                      "0": {
+                                        "team_logo": {
+                                          "size": "large",
+                                          "url": "https://example.invalid/logos/copilot.png"
+                                        }
+                                      },
+                                      "count": 1
+                                    },
+                                    "unused_managers": true
+                                  }
+                                ]
+                              },
+                              "count": 1
+                            }
+                          }
+                        ]
+                      },
+                      "count": 1
+                    }
+                  }
+                ]
+              },
+              "count": 1
+            }
+          }
+        ]
+      },
+      "count": 1
+    }
+  }
+}

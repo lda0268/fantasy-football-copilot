@@ -1,0 +1,49 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped payload. Not a real Yahoo game key.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/users;use_login=1/games",
+    "users": {
+      "0": {
+        "user": [
+          {
+            "guid": "fixture-user-guid"
+          },
+          {
+            "games": {
+              "0": {
+                "game": [
+                  {
+                    "game_key": "999",
+                    "game_id": "999",
+                    "name": "Football",
+                    "code": "nfl",
+                    "type": "full",
+                    "url": "https://example.invalid/nfl",
+                    "season": "2026",
+                    "is_registration_over": "0",
+                    "is_game_over": "0",
+                    "is_offseason": "0"
+                  }
+                ]
+              },
+              "1": {
+                "game": {
+                  "game_key": "998",
+                  "game_id": "998",
+                  "name": "Football",
+                  "code": "nfl",
+                  "season": "2025",
+                  "is_game_over": "1",
+                  "extra_unused_field": "ignored"
+                }
+              },
+              "count": 2
+            }
+          }
+        ]
+      },
+      "count": 1
+    }
+  }
+}

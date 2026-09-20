@@ -1,0 +1,955 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic 2026 Yahoo-shaped player collection. Names and IDs are fictional.",
+    "xml:lang": "en-US",
+    "yahoo:uri": "/fantasy/v2/league/999.l.123456/players;status=FA;start=0;count=25",
+    "league": [
+      {
+        "league_key": "999.l.123456",
+        "league_id": "123456",
+        "name": "Co-Pilot Test League",
+        "season": "2026",
+        "current_week": 2
+      },
+      {
+        "players": {
+          "0": {
+            "player": [
+              {
+                "player_key": "999.p.2001",
+                "player_id": "2001",
+                "name": {
+                  "full": "Joss Hale",
+                  "first": "Joss",
+                  "last": "Hale"
+                },
+                "editorial_team_abbr": "DEN",
+                "display_position": "QB",
+                "eligible_positions": [
+                  {
+                    "position": "QB"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "8"
+                },
+                "uniform_number": "10",
+                "image_url": "https://example.invalid/players/joss-hale.png"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "4.20"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "18.44"
+                },
+                "player_projected_points": {
+                  "total": "19.10"
+                }
+              }
+            ]
+          },
+          "1": {
+            "player": [
+              {
+                "player_key": "999.p.2002",
+                "player_id": "2002",
+                "name": {
+                  "full": "Kip Morrow",
+                  "first": "Kip",
+                  "last": "Morrow"
+                },
+                "editorial_team_abbr": "NYJ",
+                "display_position": "QB",
+                "eligible_positions": [
+                  {
+                    "position": "QB"
+                  }
+                ],
+                "status": "Q",
+                "status_full": "Questionable",
+                "bye_weeks": {
+                  "week": "12"
+                },
+                "uniform_number": "1"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.00"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "0.00"
+                },
+                "player_projected_points": {
+                  "total": "14.25"
+                }
+              }
+            ]
+          },
+          "2": {
+            "player": [
+              {
+                "player_key": "999.p.2003",
+                "player_id": "2003",
+                "name": {
+                  "full": "Arlo Finch",
+                  "first": "Arlo",
+                  "last": "Finch"
+                },
+                "editorial_team_abbr": "CAR",
+                "display_position": "QB",
+                "eligible_positions": [
+                  {
+                    "position": "QB"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                }
+              }
+            ]
+          },
+          "3": {
+            "player": [
+              {
+                "player_key": "999.p.2004",
+                "player_id": "2004",
+                "name": {
+                  "full": "Nico Vale",
+                  "first": "Nico",
+                  "last": "Vale"
+                },
+                "editorial_team_abbr": "CHI",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "7"
+                },
+                "uniform_number": "23",
+                "image_url": "https://example.invalid/players/nico-vale.png"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "12.50"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "9.80"
+                },
+                "player_projected_points": {
+                  "total": "11.40"
+                }
+              }
+            ]
+          },
+          "4": {
+            "player": [
+              {
+                "player_key": "999.p.2005",
+                "player_id": "2005",
+                "name": {
+                  "full": "Bram Colter",
+                  "first": "Bram",
+                  "last": "Colter"
+                },
+                "editorial_team_abbr": "ATL",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "5"
+                },
+                "uniform_number": "32"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "8.10"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "6.30"
+                },
+                "player_projected_points": {
+                  "total": "8.90"
+                }
+              }
+            ]
+          },
+          "5": {
+            "player": [
+              {
+                "player_key": "999.p.2006",
+                "player_id": "2006",
+                "name": {
+                  "full": "Quin Hart",
+                  "first": "Quin",
+                  "last": "Hart"
+                },
+                "editorial_team_abbr": "LV",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  }
+                ],
+                "status": "O",
+                "status_full": "Out",
+                "bye_weeks": {
+                  "week": "10"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "1.15"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "3.20"
+                }
+              }
+            ]
+          },
+          "6": {
+            "player": [
+              {
+                "player_key": "999.p.2007",
+                "player_id": "2007",
+                "name": {
+                  "full": "Tess Rowan",
+                  "first": "Tess",
+                  "last": "Rowan"
+                },
+                "editorial_team_abbr": "NE",
+                "display_position": "RB",
+                "eligible_positions": [
+                  {
+                    "position": "RB"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "14"
+                },
+                "uniform_number": "28"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.00"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "0.00"
+                },
+                "player_projected_points": {
+                  "total": "7.60"
+                }
+              }
+            ]
+          },
+          "7": {
+            "player": [
+              {
+                "player_key": "999.p.2008",
+                "player_id": "2008",
+                "name": {
+                  "full": "Ellis Prado",
+                  "first": "Ellis",
+                  "last": "Prado"
+                },
+                "editorial_team_abbr": "SEA",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "8"
+                },
+                "uniform_number": "11",
+                "image_url": "https://example.invalid/players/ellis-prado.png"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "9.40"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "11.22"
+                },
+                "player_projected_points": {
+                  "total": "12.05"
+                }
+              }
+            ]
+          },
+          "8": {
+            "player": [
+              {
+                "player_key": "999.p.2009",
+                "player_id": "2009",
+                "name": {
+                  "full": "Soren Blake",
+                  "first": "Soren",
+                  "last": "Blake"
+                },
+                "editorial_team_abbr": "TB",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "9"
+                },
+                "uniform_number": "18"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "3.80"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "7.10"
+                },
+                "player_projected_points": {
+                  "total": "9.50"
+                }
+              }
+            ]
+          },
+          "9": {
+            "player": [
+              {
+                "player_key": "999.p.2010",
+                "player_id": "2010",
+                "name": {
+                  "full": "Ivy Dunn",
+                  "first": "Ivy",
+                  "last": "Dunn"
+                },
+                "editorial_team_abbr": "CLE",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  }
+                ],
+                "status": "Q",
+                "status_full": "Questionable",
+                "bye_weeks": {
+                  "week": "10"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "2.25"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "4.60"
+                }
+              }
+            ]
+          },
+          "10": {
+            "player": [
+              {
+                "player_key": "999.p.2011",
+                "player_id": "2011",
+                "name": {
+                  "full": "Cade Wynn",
+                  "first": "Cade",
+                  "last": "Wynn"
+                },
+                "editorial_team_abbr": "IND",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "11"
+                },
+                "uniform_number": "13"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "6.70"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "8.44"
+                },
+                "player_projected_points": {
+                  "total": "10.20"
+                }
+              }
+            ]
+          },
+          "11": {
+            "player": [
+              {
+                "player_key": "999.p.2012",
+                "player_id": "2012",
+                "name": {
+                  "full": "Nyla Frost",
+                  "first": "Nyla",
+                  "last": "Frost"
+                },
+                "editorial_team_abbr": "ARI",
+                "display_position": "WR",
+                "eligible_positions": [
+                  {
+                    "position": "WR"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                }
+              }
+            ]
+          },
+          "12": {
+            "player": [
+              {
+                "player_key": "999.p.2013",
+                "player_id": "2013",
+                "name": {
+                  "full": "Pim Ortega",
+                  "first": "Pim",
+                  "last": "Ortega"
+                },
+                "editorial_team_abbr": "MIN",
+                "display_position": "TE",
+                "eligible_positions": [
+                  {
+                    "position": "TE"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "6"
+                },
+                "uniform_number": "87"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "5.55"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "6.80"
+                },
+                "player_projected_points": {
+                  "total": "7.90"
+                }
+              }
+            ]
+          },
+          "13": {
+            "player": [
+              {
+                "player_key": "999.p.2014",
+                "player_id": "2014",
+                "name": {
+                  "full": "Lars Voss",
+                  "first": "Lars",
+                  "last": "Voss"
+                },
+                "editorial_team_abbr": "TEN",
+                "display_position": "TE",
+                "eligible_positions": [
+                  {
+                    "position": "TE"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "5"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.80"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "1.10"
+                }
+              }
+            ]
+          },
+          "14": {
+            "player": [
+              {
+                "player_key": "999.p.2015",
+                "player_id": "2015",
+                "name": {
+                  "full": "Boaz Klein",
+                  "first": "Boaz",
+                  "last": "Klein"
+                },
+                "editorial_team_abbr": "WAS",
+                "display_position": "TE",
+                "eligible_positions": [
+                  {
+                    "position": "TE"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                }
+              }
+            ]
+          },
+          "15": {
+            "player": [
+              {
+                "player_key": "999.p.2016",
+                "player_id": "2016",
+                "name": {
+                  "full": "Milo Finch",
+                  "first": "Milo",
+                  "last": "Finch"
+                },
+                "editorial_team_abbr": "GB",
+                "display_position": "K",
+                "eligible_positions": [
+                  {
+                    "position": "K"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "10"
+                },
+                "uniform_number": "2"
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "7.30"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "9.00"
+                },
+                "player_projected_points": {
+                  "total": "8.50"
+                }
+              }
+            ]
+          },
+          "16": {
+            "player": [
+              {
+                "player_key": "999.p.2017",
+                "player_id": "2017",
+                "name": {
+                  "full": "Otis Crane",
+                  "first": "Otis",
+                  "last": "Crane"
+                },
+                "editorial_team_abbr": "LAC",
+                "display_position": "K",
+                "eligible_positions": [
+                  {
+                    "position": "K"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "12"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "1.00"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "0.00"
+                },
+                "player_projected_points": {
+                  "total": "7.00"
+                }
+              }
+            ]
+          },
+          "17": {
+            "player": [
+              {
+                "player_key": "999.p.2018",
+                "player_id": "2018",
+                "name": {
+                  "full": "Peri Lane",
+                  "first": "Peri",
+                  "last": "Lane"
+                },
+                "editorial_team_abbr": "JAX",
+                "display_position": "K",
+                "eligible_positions": [
+                  {
+                    "position": "K"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "8"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.00"
+                }
+              }
+            ]
+          },
+          "18": {
+            "player": [
+              {
+                "player_key": "999.p.2019",
+                "player_id": "2019",
+                "name": {
+                  "full": "Harbor City",
+                  "first": "Harbor",
+                  "last": "City"
+                },
+                "editorial_team_abbr": "HC",
+                "display_position": "DEF",
+                "eligible_positions": [
+                  {
+                    "position": "DEF"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "9"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "11.60"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "12.00"
+                },
+                "player_projected_points": {
+                  "total": "8.00"
+                }
+              }
+            ]
+          },
+          "19": {
+            "player": [
+              {
+                "player_key": "999.p.2020",
+                "player_id": "2020",
+                "name": {
+                  "full": "Iron Ridge",
+                  "first": "Iron",
+                  "last": "Ridge"
+                },
+                "editorial_team_abbr": "IR",
+                "display_position": "DEF",
+                "eligible_positions": [
+                  {
+                    "position": "DEF"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "13"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "2.40"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "4.00"
+                }
+              }
+            ]
+          },
+          "20": {
+            "player": [
+              {
+                "player_key": "999.p.2021",
+                "player_id": "2021",
+                "name": {
+                  "full": "Lakewood",
+                  "first": "Lakewood",
+                  "last": ""
+                },
+                "editorial_team_abbr": "LW",
+                "display_position": "DEF",
+                "eligible_positions": [
+                  {
+                    "position": "DEF"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.00"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "0.00"
+                }
+              }
+            ]
+          },
+          "21": {
+            "player": [
+              {
+                "player_key": "999.p.2022",
+                "player_id": "2022",
+                "name": {
+                  "full": "South Pier",
+                  "first": "South",
+                  "last": "Pier"
+                },
+                "editorial_team_abbr": "SP",
+                "display_position": "DEF",
+                "eligible_positions": [
+                  {
+                    "position": "DEF"
+                  }
+                ],
+                "bye_weeks": {
+                  "week": "7"
+                }
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "3.10"
+                },
+                "player_points": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "total": "5.00"
+                },
+                "player_projected_points": {
+                  "total": "6.00"
+                }
+              }
+            ]
+          },
+          "22": {
+            "player": [
+              {
+                "player_key": "999.p.2023",
+                "player_id": "2023",
+                "name": {
+                  "full": "D.J. Rowan",
+                  "first": "D.J.",
+                  "last": "Rowan"
+                },
+                "editorial_team_abbr": "JAX",
+                "display_position": "K",
+                "eligible_positions": [
+                  {
+                    "position": "K"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "1.10"
+                }
+              }
+            ]
+          },
+          "23": {
+            "player": [
+              {
+                "player_key": "999.p.2024",
+                "player_id": "2024",
+                "name": {
+                  "full": "Wynn O'Connell",
+                  "first": "Wynn",
+                  "last": "O'Connell"
+                },
+                "editorial_team_abbr": "WAS",
+                "display_position": "TE",
+                "eligible_positions": [
+                  {
+                    "position": "TE"
+                  },
+                  {
+                    "position": "W/R/T"
+                  }
+                ]
+              },
+              {
+                "ownership": {
+                  "ownership_type": "FA"
+                },
+                "percent_owned": {
+                  "coverage_type": "week",
+                  "week": "2",
+                  "value": "0.80"
+                }
+              }
+            ]
+          },
+          "count": 24
+        }
+      }
+    ]
+  }
+}

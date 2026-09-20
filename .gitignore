@@ -4,4 +4,6 @@ server/node_modules/
 dist/
 .env
 server/.env
+server/data/
+server/certs/
 *.log

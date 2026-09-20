@@ -49,6 +49,9 @@ export function DraftRoom() {
           </p>
         </div>
         <div className="draft-room-actions">
+          <a className="season-link" href="/">
+            Regular Season
+          </a>
           <button
             className="undo-btn"
             onClick={undoLastPick}
