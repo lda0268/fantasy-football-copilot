@@ -11,9 +11,6 @@
       },
       {
         "roster": {
-          "coverage_type": "week",
-          "week": "2",
-          "is_editable": 0,
           "0": {
             "players": {
               "0": {
@@ -21,11 +18,21 @@
                   {
                     "player_key": "999.p.3101",
                     "player_id": "3101",
-                    "name": { "full": "Nell Voss", "first": "Nell", "last": "Voss" },
+                    "name": {
+                      "full": "Nell Voss",
+                      "first": "Nell",
+                      "last": "Voss"
+                    },
                     "editorial_team_abbr": "GB",
                     "display_position": "QB",
-                    "eligible_positions": [{ "position": "QB" }],
-                    "bye_weeks": { "week": "10" }
+                    "eligible_positions": [
+                      {
+                        "position": "QB"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
                   },
                   {
                     "selected_position": {
@@ -41,11 +48,24 @@
                   {
                     "player_key": "999.p.3102",
                     "player_id": "3102",
-                    "name": { "full": "Wynn O’Connell", "first": "Wynn", "last": "O’Connell" },
+                    "name": {
+                      "full": "Wynn O’Connell",
+                      "first": "Wynn",
+                      "last": "O’Connell"
+                    },
                     "editorial_team_abbr": "WAS",
                     "display_position": "TE",
-                    "eligible_positions": [{ "position": "TE" }],
-                    "bye_weeks": { "week": "14" }
+                    "eligible_positions": [
+                      {
+                        "position": "TE"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
                   },
                   {
                     "selected_position": {
@@ -61,10 +81,18 @@
                   {
                     "player_key": "999.p.3103",
                     "player_id": "3103",
-                    "name": { "full": "Ivo Marsh", "first": "Ivo", "last": "Marsh" },
+                    "name": {
+                      "full": "Ivo Marsh",
+                      "first": "Ivo",
+                      "last": "Marsh"
+                    },
                     "editorial_team_abbr": "CHI",
                     "display_position": "RB",
-                    "eligible_positions": [{ "position": "RB" }],
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      }
+                    ],
                     "status": "O",
                     "status_full": "Out"
                   },
@@ -77,9 +105,332 @@
                   }
                 ]
               },
-              "count": 3
+              "3": {
+                "player": [
+                  {
+                    "player_key": "999.p.3113",
+                    "player_id": "3113",
+                    "name": {
+                      "full": "Remy Holt",
+                      "first": "Remy",
+                      "last": "Holt"
+                    },
+                    "editorial_team_abbr": "DAL",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "4": {
+                "player": [
+                  {
+                    "player_key": "999.p.3104",
+                    "player_id": "3104",
+                    "name": {
+                      "full": "Nico Vale",
+                      "first": "Nico",
+                      "last": "Vale"
+                    },
+                    "editorial_team_abbr": "CHI",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "RB"
+                    }
+                  }
+                ]
+              },
+              "5": {
+                "player": [
+                  {
+                    "player_key": "999.p.3105",
+                    "player_id": "3105",
+                    "name": {
+                      "full": "Simone Blake",
+                      "first": "Simone",
+                      "last": "Blake"
+                    },
+                    "editorial_team_abbr": "TB",
+                    "display_position": "RB",
+                    "eligible_positions": [
+                      {
+                        "position": "RB"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "RB"
+                    }
+                  }
+                ]
+              },
+              "6": {
+                "player": [
+                  {
+                    "player_key": "999.p.3106",
+                    "player_id": "3106",
+                    "name": {
+                      "full": "Ellis Prado",
+                      "first": "Ellis",
+                      "last": "Prado"
+                    },
+                    "editorial_team_abbr": "SEA",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "WR"
+                    }
+                  }
+                ]
+              },
+              "7": {
+                "player": [
+                  {
+                    "player_key": "999.p.3107",
+                    "player_id": "3107",
+                    "name": {
+                      "full": "Cade Rowan",
+                      "first": "Cade",
+                      "last": "Rowan"
+                    },
+                    "editorial_team_abbr": "LAC",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "WR"
+                    }
+                  }
+                ]
+              },
+              "8": {
+                "player": [
+                  {
+                    "player_key": "999.p.3108",
+                    "player_id": "3108",
+                    "name": {
+                      "full": "Omar Voss Jr",
+                      "first": "Omar",
+                      "last": "Voss"
+                    },
+                    "editorial_team_abbr": "DAL",
+                    "display_position": "TE",
+                    "eligible_positions": [
+                      {
+                        "position": "TE"
+                      },
+                      {
+                        "position": "W/R/T"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "W/R/T"
+                    }
+                  }
+                ]
+              },
+              "9": {
+                "player": [
+                  {
+                    "player_key": "999.p.3109",
+                    "player_id": "3109",
+                    "name": {
+                      "full": "DJ Rowan",
+                      "first": "DJ",
+                      "last": "Rowan"
+                    },
+                    "editorial_team_abbr": "JAC",
+                    "display_position": "K",
+                    "eligible_positions": [
+                      {
+                        "position": "K"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "K"
+                    }
+                  }
+                ]
+              },
+              "10": {
+                "player": [
+                  {
+                    "player_key": "999.p.3110",
+                    "player_id": "3110",
+                    "name": {
+                      "full": "Iron Ridge",
+                      "first": "Iron",
+                      "last": "Ridge"
+                    },
+                    "editorial_team_abbr": "IR",
+                    "display_position": "DEF",
+                    "eligible_positions": [
+                      {
+                        "position": "DEF"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "DEF"
+                    }
+                  }
+                ]
+              },
+              "11": {
+                "player": [
+                  {
+                    "player_key": "999.p.3111",
+                    "player_id": "3111",
+                    "name": {
+                      "full": "Joss Hale",
+                      "first": "Joss",
+                      "last": "Hale"
+                    },
+                    "editorial_team_abbr": "DEN",
+                    "display_position": "QB",
+                    "eligible_positions": [
+                      {
+                        "position": "QB"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    }
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "BN"
+                    }
+                  }
+                ]
+              },
+              "12": {
+                "player": [
+                  {
+                    "player_key": "999.p.3112",
+                    "player_id": "3112",
+                    "name": {
+                      "full": "Pax Irving",
+                      "first": "Pax",
+                      "last": "Irving"
+                    },
+                    "editorial_team_abbr": "NYJ",
+                    "display_position": "WR",
+                    "eligible_positions": [
+                      {
+                        "position": "WR"
+                      }
+                    ],
+                    "bye_weeks": {
+                      "week": "10"
+                    },
+                    "status": "IR",
+                    "status_full": "Injured Reserve"
+                  },
+                  {
+                    "selected_position": {
+                      "coverage_type": "week",
+                      "week": "2",
+                      "position": "IR"
+                    }
+                  }
+                ]
+              },
+              "count": 13
             }
-          }
+          },
+          "coverage_type": "week",
+          "week": "2",
+          "is_editable": 0
         }
       }
     ]

@@ -257,6 +257,45 @@
       "filename": "Bare Projection.php",
       "extra_meta": true,
       "stats": {}
+    },
+    {
+      "fpid": 90021,
+      "mflid": null,
+      "name": "Omar Voss Jr",
+      "position_id": "TE",
+      "team_id": "DAL",
+      "filename": "Omar Voss Jr.php",
+      "stats": {
+        "points": 6.4,
+        "points_half": 6.4,
+        "points_ppr": 8.1
+      }
+    },
+    {
+      "fpid": 90023,
+      "mflid": null,
+      "name": "DJ Rowan",
+      "position_id": "K",
+      "team_id": "JAC",
+      "filename": "DJ Rowan.php",
+      "stats": {
+        "points": 8,
+        "points_half": 8,
+        "points_ppr": 8
+      }
+    },
+    {
+      "fpid": 90024,
+      "mflid": null,
+      "name": "Wynn O’Connell",
+      "position_id": "TE",
+      "team_id": "WAS",
+      "filename": "Wynn OConnell.php",
+      "stats": {
+        "points": 7.1,
+        "points_half": 7.1,
+        "points_ppr": 9.4
+      }
     }
   ]
 }

@@ -135,6 +135,51 @@
       "rank_ecr": 14,
       "pos_rank": "K4",
       "extra_rank_field": true
+    },
+    {
+      "player_id": 90013,
+      "player_name": "Ellis Prado",
+      "player_team_id": "SEA",
+      "player_position_id": "WR",
+      "player_positions": "WR",
+      "rank_ecr": 54,
+      "pos_rank": "WR26"
+    },
+    {
+      "player_id": 90021,
+      "player_name": "Omar Voss Jr",
+      "player_team_id": "DAL",
+      "player_position_id": "TE",
+      "player_positions": "TE",
+      "rank_ecr": 22,
+      "pos_rank": "TE8"
+    },
+    {
+      "player_id": 90023,
+      "player_name": "DJ Rowan",
+      "player_team_id": "JAC",
+      "player_position_id": "K",
+      "player_positions": "K",
+      "rank_ecr": 18,
+      "pos_rank": "K6"
+    },
+    {
+      "player_id": 90024,
+      "player_name": "Wynn O’Connell",
+      "player_team_id": "WAS",
+      "player_position_id": "TE",
+      "player_positions": "TE",
+      "rank_ecr": 16,
+      "pos_rank": "TE6"
+    },
+    {
+      "player_id": 90014,
+      "player_name": "Remy Holt",
+      "player_team_id": "DAL",
+      "player_position_id": "WR",
+      "player_positions": "WR",
+      "rank_ecr": 90,
+      "pos_rank": "WR48"
     }
   ]
 }

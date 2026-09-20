@@ -7,6 +7,7 @@ import { copilotRouter } from "./routes/copilot.js";
 import { fantasyProsRouter } from "./routes/fantasypros.js";
 import { playerIdentityRouter } from "./routes/playerIdentity.js";
 import { playerIntelligenceRouter } from "./routes/playerIntelligence.js";
+import { matchupRouter } from "./routes/matchup.js";
 import { startSitRouter } from "./routes/startSit.js";
 import { yahooRouter } from "./routes/yahoo.js";
 
@@ -23,6 +24,7 @@ app.use("/api/fantasypros", fantasyProsRouter);
 app.use("/api/player-identity", playerIdentityRouter);
 app.use("/api/player-intelligence", playerIntelligenceRouter);
 app.use("/api/start-sit", startSitRouter);
+app.use("/api/matchup-intelligence", matchupRouter);
 
 const server = https.createServer(
   {

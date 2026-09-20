@@ -12,6 +12,7 @@ import type {
   YahooLeagueSettings,
   YahooRosterPosition,
   StartSitResult,
+  MatchupIntelligence,
 } from "./types";
 
 export function getYahooStatus(): Promise<YahooStatus> {
@@ -67,4 +68,8 @@ export function getCopilotRecommendationsV2(limit?: number): Promise<CopilotReco
 
 export function getStartSit(): Promise<StartSitResult> {
   return requestJson<StartSitResult>("/api/start-sit");
+}
+
+export function getMatchupIntelligence(): Promise<MatchupIntelligence> {
+  return requestJson<MatchupIntelligence>("/api/matchup-intelligence");
 }

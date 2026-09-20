@@ -74,7 +74,7 @@ export function DashboardPage({ navigate, load = loadDashboard }: DashboardPageP
       ) : null}
       <div className="dash-grid-top">
         <TeamOverviewCard team={data.team} standing={standing} />
-        <MatchupCard matchup={data.matchup} userTeamKey={data.team?.teamKey} standings={data.standings} />
+        <MatchupCard matchup={data.matchup} userTeamKey={data.team?.teamKey} standings={data.standings} navigate={navigate} />
       </div>
       <div className="dash-grid-mid">
         <RecommendationsPanel payload={data.recommendations} errorMessage={recError} />

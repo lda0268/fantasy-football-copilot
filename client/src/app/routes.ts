@@ -3,6 +3,7 @@ export const ROUTES = {
   team: "/team",
   waivers: "/waivers",
   startSit: "/start-sit",
+  matchup: "/matchup",
   players: "/players",
   league: "/league",
   settings: "/settings",
@@ -14,6 +15,7 @@ export type AppPath = (typeof ROUTES)[keyof typeof ROUTES];
 export const NAV_ITEMS: Array<{ path: AppPath; label: string }> = [
   { path: ROUTES.dashboard, label: "Dashboard" },
   { path: ROUTES.team, label: "My Team" },
+  { path: ROUTES.matchup, label: "Matchup" },
   { path: ROUTES.waivers, label: "Waiver Wire" },
   { path: ROUTES.startSit, label: "Start / Sit" },
   { path: ROUTES.players, label: "Players" },

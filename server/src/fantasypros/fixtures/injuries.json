@@ -30,6 +30,17 @@
       "injury_update_date": "2026-09-14"
     },
     {
+      "player_id": 90020,
+      "name": "Simone Blake",
+      "team_id": "TB",
+      "position_id": "RB",
+      "status": "Questionable",
+      "status_short": "Q",
+      "injury_type": "Hamstring",
+      "practice_1": "Limit",
+      "comment": "Synthetic fixture only."
+    },
+    {
       "name": "Unidentified Practice Report",
       "status": "Questionable",
       "practice_1": "DNP"

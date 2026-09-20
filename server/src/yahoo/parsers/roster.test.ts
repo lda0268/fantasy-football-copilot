@@ -147,7 +147,7 @@ describe("parseYahooRosterPlayers", () => {
 
     const other = JSON.parse(readFileSync(path.join(fixturesDir, "roster-2.json"), "utf8"));
     const otherPlayers = parseYahooRosterPlayers(other);
-    assert.equal(otherPlayers.length, 3);
+    assert.equal(otherPlayers.length, 13);
     assert.equal(otherPlayers[1].name, "Wynn O’Connell");
     assert.equal(otherPlayers[2].status, "O");
     assert.equal(otherPlayers[2].byeWeek, undefined);

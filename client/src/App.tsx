@@ -3,6 +3,7 @@ import { ROUTES } from "./app/routes";
 import { usePathname } from "./app/usePathname";
 import { DashboardPage } from "./season/DashboardPage";
 import { LeaguePage } from "./season/LeaguePage";
+import { MatchupPage } from "./season/MatchupPage";
 import { MyTeamPage } from "./season/MyTeamPage";
 import { PlaceholderPage } from "./season/PlaceholderPage";
 import { PlayersPage } from "./season/PlayersPage";
@@ -34,6 +35,8 @@ export default function App() {
         <MyTeamPage navigate={navigate} />
       ) : path === ROUTES.startSit ? (
         <StartSitPage />
+      ) : path === ROUTES.matchup ? (
+        <MatchupPage navigate={navigate} />
       ) : path === ROUTES.players ? (
         <PlayersPage navigate={navigate} />
       ) : path === ROUTES.league ? (

@@ -283,7 +283,8 @@
       "last_name": "Solis",
       "reverse_name": "Solis, Maren",
       "position_id": "WR",
-      "positions": ["WR"]
+      "positions": ["WR"],
+      "team_id": "NO"
     },
     {
       "player_id": 90023,

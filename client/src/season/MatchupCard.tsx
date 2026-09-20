@@ -1,3 +1,4 @@
+import { ROUTES } from "../app/routes";
 import { formatRecord } from "./labels";
 import type { YahooMatchup, YahooMatchupTeam, YahooStanding } from "../api/types";
 
@@ -5,9 +6,10 @@ type MatchupCardProps = {
   matchup?: YahooMatchup;
   userTeamKey?: string;
   standings: YahooStanding[];
+  navigate?: (to: string) => void;
 };
 
-export function MatchupCard({ matchup, userTeamKey, standings }: MatchupCardProps) {
+export function MatchupCard({ matchup, userTeamKey, standings, navigate }: MatchupCardProps) {
   if (!matchup) {
     return (
       <section className="panel-card" aria-labelledby="matchup-heading">
@@ -21,7 +23,21 @@ export function MatchupCard({ matchup, userTeamKey, standings }: MatchupCardProp
   const opponent = matchup.teams.find((team) => team.teamKey !== user?.teamKey);
   return (
     <section className="panel-card" aria-labelledby="matchup-heading">
-      <h2 id="matchup-heading">Week {matchup.week} Matchup</h2>
+      <div className="panel-heading-row">
+        <h2 id="matchup-heading">Week {matchup.week} Matchup</h2>
+        {navigate ? (
+          <a
+            href={ROUTES.matchup}
+            className="text-link"
+            onClick={(event) => {
+              event.preventDefault();
+              navigate(ROUTES.matchup);
+            }}
+          >
+            View Matchup
+          </a>
+        ) : null}
+      </div>
       <div className="matchup-split">
         <MatchupSide team={user} standing={standings.find((row) => row.teamKey === user?.teamKey)} you />
         <span className="matchup-vs">vs</span>
