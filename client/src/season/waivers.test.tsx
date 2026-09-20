@@ -6,6 +6,14 @@ import type { CopilotRecommendation, PlayerIntelligence } from "../api/types";
 import { WaiverWirePage } from "./WaiverWirePage";
 import type { WaiverWireData } from "./loadWaiverWire";
 
+vi.mock("./loadStartSit", () => ({
+  loadStartSit: vi.fn(async () => ({
+    yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },
+    fantasyProsStatus: { configured: true, mode: "fixture" },
+    leagues: [],
+  })),
+}));
+
 vi.mock("./loadMyTeam", () => ({
   loadMyTeam: vi.fn(async () => ({
     yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },

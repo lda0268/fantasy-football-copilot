@@ -9,6 +9,7 @@ import type {
   YahooStanding,
   YahooStatus,
   YahooTeam,
+  StartSitResult,
 } from "./types";
 
 export function getYahooStatus(): Promise<YahooStatus> {
@@ -46,4 +47,8 @@ export function getPlayerIntelligence(): Promise<{ players: PlayerIntelligence[]
 export function getCopilotRecommendationsV2(limit?: number): Promise<CopilotRecommendationsResponse> {
   const query = limit != null ? `?limit=${limit}` : "";
   return requestJson<CopilotRecommendationsResponse>(`/api/copilot/v2/recommendations${query}`);
+}
+
+export function getStartSit(): Promise<StartSitResult> {
+  return requestJson<StartSitResult>("/api/start-sit");
 }

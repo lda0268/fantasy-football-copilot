@@ -825,6 +825,208 @@ body,
   color: #b9c6d9;
 }
 
+.readonly-note {
+  margin: -4px 0 14px;
+  color: var(--season-muted);
+  font-size: 12px;
+}
+
+.start-sit-page .panel-card {
+  margin-bottom: 12px;
+}
+
+.projection-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.projection-card {
+  padding: 12px;
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  background: #132038;
+}
+
+.projection-card h3 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #b9c6d9;
+}
+
+.projection-points {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.projection-known,
+.projection-complete {
+  margin: 4px 0 0;
+  color: var(--season-muted);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.incomplete-label {
+  margin: 8px 0 0;
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--season-warn);
+  border-radius: 999px;
+  color: var(--season-warn);
+  font-size: 12px;
+}
+
+.projection-note {
+  margin: 10px 0 0;
+  color: var(--season-muted);
+}
+
+.projection-delta,
+.move-delta {
+  margin: 8px 0 0;
+  font-weight: 600;
+}
+
+.move-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.move-card {
+  padding: 14px;
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  background: #132038;
+}
+
+.move-slot {
+  margin: 0 0 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.move-grid {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.move-grid dt {
+  color: var(--season-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.move-grid dd {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.move-subhead {
+  margin: 12px 0 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #b9c6d9;
+}
+
+.lineup-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lineup-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.lineup-row {
+  padding: 10px;
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  background: #132038;
+}
+
+.lineup-row.is-changed {
+  border-style: dashed;
+  background: #1a2940;
+}
+
+.lineup-row.is-selected {
+  outline: 1px solid var(--season-accent);
+}
+
+.lineup-row-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.change-tag {
+  margin-left: auto;
+  padding: 1px 8px;
+  border: 1px solid var(--season-accent);
+  border-radius: 999px;
+  color: var(--season-accent);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.review-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.review-list li {
+  padding: 10px;
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+}
+
+.settings-toggle {
+  font-weight: 700;
+}
+
+.settings-list {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.settings-list li {
+  padding: 6px 10px;
+  border: 1px solid var(--season-border);
+  border-radius: 8px;
+  background: #132038;
+}
+
+.start-sit-mini {
+  width: 100%;
+}
+
 @media (max-width: 1100px) {
   .dash-grid-top,
   .dash-grid-mid {
@@ -837,5 +1039,11 @@ body,
 
   .intel-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projection-pair,
+  .lineup-compare,
+  .move-grid {
+    grid-template-columns: 1fr;
   }
 }

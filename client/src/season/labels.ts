@@ -20,6 +20,12 @@ export const NEED_SEVERITY_LABELS: Record<"low" | "medium" | "high", string> = {
   low: "Low Need",
 };
 
+export const WEEKLY_SUPPORT_LABELS: Record<string, string> = {
+  strongly_supported: "Projection + ranking",
+  supported: "Partial weekly data",
+  limited: "Limited weekly data",
+};
+
 export const IDENTITY_LABELS: Record<string, string> = {
   matched: "Enriched",
   unresolved: "Intelligence unavailable",

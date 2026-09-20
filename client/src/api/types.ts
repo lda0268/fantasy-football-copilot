@@ -175,6 +175,96 @@ export type CopilotRecommendationsResponse = {
   recommendations: CopilotRecommendation[];
 };
 
+export type StartSitDataQuality = "strongly_supported" | "supported" | "limited";
+
+export type StartSitSlot = {
+  id: string;
+  position: string;
+  index: number;
+};
+
+export type StartSitLineupPlayer = {
+  yahooPlayerKey: string;
+  name: string;
+  team?: string;
+  position?: string;
+  yahooPositions: string[];
+  identityStatus: PlayerIdentityStatus | string;
+  currentSlot?: string;
+  weeklyProjectedPoints?: number;
+  weeklyEcr?: number;
+  weeklyValue?: number;
+  dataQuality: StartSitDataQuality;
+  injuryStatus?: string;
+  warnings: string[];
+};
+
+export type StartSitAssignment = {
+  slot: StartSitSlot;
+  player?: StartSitLineupPlayer;
+};
+
+export type StartSitMove = {
+  type: "swap";
+  slot: string;
+  slotId: string;
+  startPlayer: StartSitLineupPlayer;
+  sitPlayer?: StartSitLineupPlayer;
+  weeklyValue: {
+    start?: number;
+    sit?: number;
+  };
+  projectedPointsDelta?: number;
+  reasons: string[];
+  warnings: string[];
+};
+
+export type StartSitReviewItem = {
+  slot: string;
+  slotId: string;
+  currentPlayer?: StartSitLineupPlayer;
+  candidatePlayer?: StartSitLineupPlayer;
+  reason: string;
+};
+
+export type StartSitProjectionTotal = {
+  points: number;
+  projectedSlots: number;
+  totalSlots: number;
+  complete: boolean;
+};
+
+export type YahooRosterPosition = {
+  position: string;
+  count: number;
+};
+
+export type StartSitResult = {
+  context: {
+    week: number | null;
+    scoringFormat: string;
+    providerModes: { yahoo: YahooDataMode; fantasyPros: "live" | "fixture" };
+    lineupSource: "fixture" | "live";
+  };
+  summary: {
+    rosterPlayers: number;
+    startingSlots: number;
+    proposedChanges: number;
+    reviewRequired: number;
+    currentProjection: StartSitProjectionTotal;
+    recommendedProjection: StartSitProjectionTotal;
+    projectedPointsDelta?: number;
+    message: string;
+  };
+  currentLineup: StartSitAssignment[];
+  recommendedLineup: StartSitAssignment[];
+  moves: StartSitMove[];
+  reviewRequired: StartSitReviewItem[];
+  bench: StartSitLineupPlayer[];
+  ir: StartSitLineupPlayer[];
+  lineupSettings: YahooRosterPosition[];
+};
+
 export type ApiErrorBody = {
   error?: string;
   message?: string;

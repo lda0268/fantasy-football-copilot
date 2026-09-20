@@ -16,6 +16,14 @@ vi.mock("./loadMyTeam", () => ({
   })),
 }));
 
+vi.mock("./loadStartSit", () => ({
+  loadStartSit: vi.fn(async () => ({
+    yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },
+    fantasyProsStatus: { configured: true, mode: "fixture" },
+    leagues: [],
+  })),
+}));
+
 vi.mock("./loadDashboard", () => ({
   loadDashboard: vi.fn(async () => ({
     yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },
