@@ -140,6 +140,17 @@ describe("parseYahooLeagues", () => {
     assert.equal(leagues[0].leagueKey, "999.l.123456");
     assert.equal(leagues[0].numTeams, 12);
     assert.equal(leagues[0].currentWeek, 2);
+    assert.deepEqual(leagues[0].rosterPositions, [
+      { position: "QB", count: 1 },
+      { position: "WR", count: 2 },
+      { position: "RB", count: 2 },
+      { position: "TE", count: 1 },
+      { position: "W/R/T", count: 1 },
+      { position: "K", count: 1 },
+      { position: "DEF", count: 1 },
+      { position: "BN", count: 6 },
+      { position: "IR", count: 1 },
+    ]);
     assert.equal(leagues[1].name, "Co-Pilot Taxi Squad");
   });
 });

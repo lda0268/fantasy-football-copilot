@@ -55,6 +55,10 @@ export function buildLeaguePlayersResource(filters: LeaguePlayerFilters): string
   return `league/${leagueKey}/players;${parts.join(";")}`;
 }
 
+export function buildLeagueSettingsResource(leagueKey: string): string {
+  return `league/${assertSafeLeagueKey(leagueKey)}/settings`;
+}
+
 export function buildFreeAgentResource(options: {
   leagueKey: string;
   start: number;

@@ -9,6 +9,11 @@ export interface YahooGame {
   isGameOver?: boolean;
 }
 
+export interface YahooRosterPosition {
+  position: string;
+  count: number;
+}
+
 export interface YahooLeague {
   leagueKey: string;
   leagueId: string;
@@ -20,6 +25,7 @@ export interface YahooLeague {
   endWeek?: number;
   scoringType?: string;
   url?: string;
+  rosterPositions?: YahooRosterPosition[];
 }
 
 export interface YahooStatus {

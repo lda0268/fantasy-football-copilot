@@ -1,0 +1,28 @@
+{
+  "fantasy_content": {
+    "_fixture": "Synthetic Yahoo-shaped league settings. Not used in live mode.",
+    "league": [
+      {
+        "league_key": "999.l.123456",
+        "league_id": "123456",
+        "name": "Co-Pilot Test League"
+      },
+      {
+        "settings": {
+          "roster_positions": {
+            "0": { "roster_position": { "position": "QB", "count": 1 } },
+            "1": { "roster_position": { "position": "WR", "count": 2 } },
+            "2": { "roster_position": { "position": "RB", "count": 2 } },
+            "3": { "roster_position": { "position": "TE", "count": 1 } },
+            "4": { "roster_position": { "position": "W/R/T", "count": 1 } },
+            "5": { "roster_position": { "position": "K", "count": 1 } },
+            "6": { "roster_position": { "position": "DEF", "count": 1 } },
+            "7": { "roster_position": { "position": "BN", "count": 6 } },
+            "8": { "roster_position": { "position": "IR", "count": 1 } },
+            "count": 9
+          }
+        }
+      }
+    ]
+  }
+}

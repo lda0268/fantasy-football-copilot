@@ -1,4 +1,5 @@
 import type { YahooLeague } from "../types.js";
+import { parseRosterPositions } from "./rosterPositions.js";
 import { collectNamedResources, parseError, readNumber, readString } from "./walk.js";
 
 export function parseYahooLeagues(payload: unknown): YahooLeague[] {
@@ -46,6 +47,10 @@ function normalizeLeague(block: Record<string, unknown>, index: number): YahooLe
   const url = readString(block.url);
   if (url !== undefined) {
     league.url = url;
+  }
+  const rosterPositions = parseRosterPositions(block);
+  if (rosterPositions.length > 0) {
+    league.rosterPositions = rosterPositions;
   }
 
   return league;

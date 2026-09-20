@@ -5,6 +5,7 @@ import { yahooGet } from "./client.js";
 import { isYahooApiError, YahooApiError, YahooErrorCode } from "./errors.js";
 import { parseYahooGames, selectActiveNflGame } from "./parsers/games.js";
 import { parseYahooLeagues, selectPrimaryLeague } from "./parsers/leagues.js";
+import { parseRosterPositions } from "./parsers/rosterPositions.js";
 import { parseYahooMatchups, selectMatchupForTeam } from "./parsers/matchup.js";
 import { parseYahooAvailablePlayers } from "./parsers/players.js";
 import { parseRosterWeek, parseYahooRosterPlayers } from "./parsers/roster.js";
@@ -18,6 +19,7 @@ import {
 import {
   YAHOO_PLAYER_FILTER_COUNT_MAX,
   buildFreeAgentResource,
+  buildLeagueSettingsResource,
   buildPlayerSearchResource,
 } from "./resources.js";
 import { loadYahooTokens } from "./tokenStore.js";
@@ -27,6 +29,7 @@ import type {
   YahooLeague,
   YahooMatchup,
   YahooRosterPlayer,
+  YahooRosterPosition,
   YahooStanding,
   YahooStatus,
   YahooTeam,
@@ -105,6 +108,33 @@ export async function listYahooLeagues(): Promise<YahooLeague[]> {
   return parseYahooLeagues(
     await yahooGet(`users;use_login=1/games;game_keys=${nflGame.gameKey}/leagues`),
   );
+}
+
+export async function getYahooLeagueSettings(): Promise<{
+  league: YahooLeague;
+  rosterPositions: YahooRosterPosition[];
+  source: "fixture" | "live";
+}> {
+  const league = await requirePrimaryLeague();
+  if (config.yahoo.fixtureMode) {
+    const fromLeague = league.rosterPositions ?? [];
+    const fromSettingsFile = parseRosterPositions(await readFixture("league-settings.json"));
+    const rosterPositions = fromLeague.length > 0 ? fromLeague : fromSettingsFile;
+    return {
+      league: { ...league, rosterPositions },
+      rosterPositions,
+      source: "fixture",
+    };
+  }
+
+  const settingsPayload = await yahooGet(buildLeagueSettingsResource(league.leagueKey));
+  const fromSettings = parseRosterPositions(settingsPayload);
+  const rosterPositions = fromSettings.length > 0 ? fromSettings : (league.rosterPositions ?? []);
+  return {
+    league: { ...league, rosterPositions },
+    rosterPositions,
+    source: "live",
+  };
 }
 
 export async function getYahooTeam(): Promise<YahooTeam> {

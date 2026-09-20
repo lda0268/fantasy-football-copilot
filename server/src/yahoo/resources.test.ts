@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { YahooApiError, YahooErrorCode } from "./errors.js";
-import { assertSearchQuery, buildFreeAgentResource, buildPlayerSearchResource } from "./resources.js";
+import { assertSearchQuery, buildFreeAgentResource, buildLeagueSettingsResource, buildPlayerSearchResource } from "./resources.js";
 
 describe("Yahoo player resource builders", () => {
   it("encodes leagueKey, status=FA, start, and count", () => {
@@ -42,6 +42,10 @@ describe("Yahoo player resource builders", () => {
       }),
       "league/999.l.123456/players;position=WR;search=nico%20vale;start=0;count=25",
     );
+  });
+
+  it("builds a league settings resource from a safe league key", () => {
+    assert.equal(buildLeagueSettingsResource("999.l.123456"), "league/999.l.123456/settings");
   });
 
   it("rejects league keys and search values that could alter the resource path", () => {

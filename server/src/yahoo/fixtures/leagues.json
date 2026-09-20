@@ -36,7 +36,20 @@
                             "end_week": "17",
                             "season": "2026",
                             "scoring_type": "head",
-                            "league_type": "private"
+                            "league_type": "private",
+                            "roster_positions": {
+                              "_fixture": "Synthetic Yahoo-shaped roster slot configuration. Fixture data only.",
+                              "0": { "roster_position": { "position": "QB", "position_type": "O", "count": 1 } },
+                              "1": { "roster_position": { "position": "WR", "position_type": "O", "count": 2 } },
+                              "2": { "roster_position": { "position": "RB", "position_type": "O", "count": 2 } },
+                              "3": { "roster_position": { "position": "TE", "position_type": "O", "count": 1 } },
+                              "4": { "roster_position": { "position": "W/R/T", "position_type": "F", "count": 1 } },
+                              "5": { "roster_position": { "position": "K", "position_type": "K", "count": 1 } },
+                              "6": { "roster_position": { "position": "DEF", "position_type": "DT", "count": 1 } },
+                              "7": { "roster_position": { "position": "BN", "position_type": "BN", "count": 6 } },
+                              "8": { "roster_position": { "position": "IR", "position_type": "IR", "count": 1 } },
+                              "count": 9
+                            }
                           }
                         ]
                       },

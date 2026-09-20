@@ -7,7 +7,7 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "tsx --test src/yahoo/parsers/games.test.ts src/yahoo/parsers/leagues.test.ts src/yahoo/parsers/team.test.ts src/yahoo/parsers/roster.test.ts src/yahoo/parsers/matchup.test.ts src/yahoo/parsers/standings.test.ts src/yahoo/parsers/players.test.ts src/yahoo/resources.test.ts src/copilot/recommendations.test.ts src/copilot/v2/recommendations.test.ts src/fantasypros/parsers/parsers.test.ts src/fantasypros/adapter.test.ts src/playerIdentity/identity.test.ts src/playerIntelligence/compose.test.ts"
+    "test": "tsx --test src/yahoo/parsers/games.test.ts src/yahoo/parsers/leagues.test.ts src/yahoo/parsers/team.test.ts src/yahoo/parsers/roster.test.ts src/yahoo/parsers/matchup.test.ts src/yahoo/parsers/standings.test.ts src/yahoo/parsers/players.test.ts src/yahoo/parsers/rosterPositions.test.ts src/yahoo/resources.test.ts src/copilot/recommendations.test.ts src/copilot/v2/recommendations.test.ts src/fantasypros/parsers/parsers.test.ts src/fantasypros/adapter.test.ts src/playerIdentity/identity.test.ts src/playerIntelligence/compose.test.ts src/startSit/engine.test.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
