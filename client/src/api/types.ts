@@ -104,6 +104,15 @@ export type PlayerIntelligence = {
   weekly?: { week?: number; projectedPoints?: number; ecr?: number };
   restOfSeason?: { projectedPoints?: number; ecr?: number };
   injury?: { status?: string; practiceStatus?: string; description?: string };
+  provenance?: {
+    yahoo: boolean;
+    fantasyPros: boolean;
+    fields: Record<string, { provider: "yahoo" | "fantasypros"; observedAt?: string }>;
+  };
+  freshness?: {
+    yahoo?: { observedAt?: string; stale?: boolean };
+    fantasyPros?: { observedAt?: string; stale?: boolean };
+  };
   warnings: string[];
 };
 

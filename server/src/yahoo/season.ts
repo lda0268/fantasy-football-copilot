@@ -21,6 +21,7 @@ import {
   buildFreeAgentResource,
   buildLeagueSettingsResource,
   buildPlayerSearchResource,
+  buildPlayersByStatusResource,
 } from "./resources.js";
 import { loadYahooTokens } from "./tokenStore.js";
 import type {
@@ -194,24 +195,74 @@ export type YahooPlayerListResult = {
 };
 
 export async function getYahooFreeAgents(query: PlayerListQuery): Promise<YahooPlayerListResult> {
+  return getYahooPlayersByStatus("FA", query);
+}
+
+export async function getYahooPlayersByStatus(
+  status: "FA" | "W" | "T",
+  query: PlayerListQuery,
+): Promise<YahooPlayerListResult> {
   const league = await requirePrimaryLeague();
   if (config.yahoo.fixtureMode) {
-    return pageFixturePlayers(league, await readFixture("free-agents.json"), query);
+    const fileName = status === "FA" ? "free-agents.json" : "player-search.json";
+    const parsed = parseYahooAvailablePlayers(await readFixture(fileName));
+    const byStatus =
+      status === "FA"
+        ? parsed
+        : parsed.filter((player) => ownershipMatchesStatus(player.ownershipType, status));
+    return pageParsedPlayers(league, byStatus, query);
   }
 
   const players = await fetchYahooPlayerPages(query, (page) =>
-    buildFreeAgentResource({
-      leagueKey: league.leagueKey,
-      start: page.start,
-      count: page.count,
-      position: query.position,
-    }),
+    status === "FA"
+      ? buildFreeAgentResource({
+          leagueKey: league.leagueKey,
+          start: page.start,
+          count: page.count,
+          position: query.position,
+        })
+      : buildPlayersByStatusResource({
+          leagueKey: league.leagueKey,
+          start: page.start,
+          count: page.count,
+          position: query.position,
+          status,
+        }),
   );
   return {
     league,
     players,
     pagination: { start: query.start, count: players.length, total: null },
   };
+}
+
+function pageParsedPlayers(
+  league: YahooLeague,
+  players: YahooAvailablePlayer[],
+  query: PlayerListQuery & { query?: string },
+): YahooPlayerListResult {
+  const filtered = filterAvailablePlayers(players, {
+    position: query.position,
+    query: query.query,
+  });
+  const page = paginatePlayers(filtered, query.start, query.count);
+  return {
+    league,
+    players: page,
+    pagination: {
+      start: query.start,
+      count: page.length,
+      total: filtered.length,
+    },
+  };
+}
+
+function ownershipMatchesStatus(ownershipType: string | undefined, status: "W" | "T"): boolean {
+  const ownership = ownershipType?.trim().toLowerCase().replace(/[\s_-]/g, "") ?? "";
+  if (status === "W") {
+    return ownership === "w" || ownership === "waiver" || ownership === "waivers";
+  }
+  return ownership === "team";
 }
 
 export async function getYahooPlayerSearch(
@@ -245,20 +296,7 @@ function pageFixturePlayers(
   payload: unknown,
   query: PlayerListQuery & { query?: string },
 ): YahooPlayerListResult {
-  const filtered = filterAvailablePlayers(parseYahooAvailablePlayers(payload), {
-    position: query.position,
-    query: query.query,
-  });
-  const players = paginatePlayers(filtered, query.start, query.count);
-  return {
-    league,
-    players,
-    pagination: {
-      start: query.start,
-      count: players.length,
-      total: filtered.length,
-    },
-  };
+  return pageParsedPlayers(league, parseYahooAvailablePlayers(payload), query);
 }
 
 async function fetchYahooPlayerPages(

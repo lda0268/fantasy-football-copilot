@@ -72,6 +72,15 @@ TTL policy is consumed from the existing FantasyPros cache constants (`players` 
 
 Optional filters (applied after composition): `position`, `availability`, `identityStatus`.
 
+The composed Yahoo universe is:
+
+- the authenticated user's roster
+- Yahoo free agents (`status=FA`, first page up to 50)
+- Yahoo waiver players (`status=W`, first page up to 50)
+- Yahoo taken/other-team players (`status=T`, first page up to 50)
+
+It is **not** the full FantasyPros player catalog. FantasyPros-only players without a Yahoo league record are not composed. Duplicate Yahoo keys keep the first record after the existing player-key sort.
+
 Respects configured provider modes. Live Yahoo 403 is returned as a provider error; fixtures are not substituted.
 
 Yahoo fixture + live FantasyPros will often yield unresolved identities because Yahoo fixtures are fictional. That is expected.

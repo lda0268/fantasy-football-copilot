@@ -914,40 +914,7 @@
               }
             ]
           },
-          "23": {
-            "player": [
-              {
-                "player_key": "999.p.2024",
-                "player_id": "2024",
-                "name": {
-                  "full": "Wynn O'Connell",
-                  "first": "Wynn",
-                  "last": "O'Connell"
-                },
-                "editorial_team_abbr": "WAS",
-                "display_position": "TE",
-                "eligible_positions": [
-                  {
-                    "position": "TE"
-                  },
-                  {
-                    "position": "W/R/T"
-                  }
-                ]
-              },
-              {
-                "ownership": {
-                  "ownership_type": "FA"
-                },
-                "percent_owned": {
-                  "coverage_type": "week",
-                  "week": "2",
-                  "value": "0.80"
-                }
-              }
-            ]
-          },
-          "count": 24
+          "count": 23
         }
       }
     ]

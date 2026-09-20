@@ -9,7 +9,7 @@ import {
 import { reconcilePlayers } from "../playerIdentity/matcher.js";
 import { toYahooIdentityPlayer } from "../playerIdentity/fromProviders.js";
 import { PLAYER_PAGE_MAX_COUNT } from "../yahoo/resources.js";
-import { getYahooFreeAgents, getYahooRoster, getYahooStatus } from "../yahoo/season.js";
+import { getYahooFreeAgents, getYahooPlayersByStatus, getYahooRoster, getYahooStatus } from "../yahoo/season.js";
 import type { YahooRosterPlayer } from "../yahoo/types.js";
 import { composePlayerIntelligence, summarizePlayers } from "./compose.js";
 import { toYahooLeaguePlayer } from "./fromYahoo.js";
@@ -50,17 +50,21 @@ export async function composeCurrentPlayerIntelligence(
 }
 
 export async function loadPlayerIntelligenceContext(): Promise<PlayerIntelligenceContext> {
-  const [yahooStatus, fantasyProsStatus, roster, freeAgents, fantasyProsPlayers] = await Promise.all([
+  const [yahooStatus, fantasyProsStatus, roster, freeAgents, waivers, taken, fantasyProsPlayers] = await Promise.all([
     getYahooStatus(),
     Promise.resolve(getFantasyProsStatus()),
     getYahooRoster(),
     getYahooFreeAgents({ start: 0, count: PLAYER_PAGE_MAX_COUNT }),
+    getYahooPlayersByStatus("W", { start: 0, count: PLAYER_PAGE_MAX_COUNT }),
+    getYahooPlayersByStatus("T", { start: 0, count: PLAYER_PAGE_MAX_COUNT }),
     listFantasyProsPlayers(),
   ]);
 
   const yahooPlayers = [
     ...roster.players.map((player) => toYahooLeaguePlayer(player, "roster")),
     ...freeAgents.players.map((player) => toYahooLeaguePlayer(player, "available")),
+    ...waivers.players.map((player) => toYahooLeaguePlayer(player, "available")),
+    ...taken.players.map((player) => toYahooLeaguePlayer(player, "available")),
   ];
   const identity = reconcilePlayers(
     yahooPlayers.map((player) =>
@@ -111,7 +115,7 @@ export async function loadPlayerIntelligenceContext(): Promise<PlayerIntelligenc
   };
 }
 
-function filterPlayers(players: PlayerIntelligence[], query: PlayerIntelligenceQuery): PlayerIntelligence[] {
+export function filterPlayers(players: PlayerIntelligence[], query: PlayerIntelligenceQuery): PlayerIntelligence[] {
   return players.filter((player) => {
     if (query.position && player.player.position !== query.position) {
       return false;

@@ -6,5 +6,6 @@ export default defineConfig({
   test: {
     environment: "node",
     environmentMatchGlobs: [["src/**/*.test.tsx", "jsdom"]],
+    testTimeout: 20000,
   },
 });

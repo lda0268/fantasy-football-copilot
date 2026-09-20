@@ -14,6 +14,14 @@ export const AVAILABILITY_LABELS: Record<LeagueAvailability, string> = {
   unknown: "Unknown",
 };
 
+export const PLAYERS_AVAILABILITY_LABELS: Record<LeagueAvailability, string> = {
+  rostered_by_user: "My Team",
+  rostered_by_other: "Other Team",
+  free_agent: "Free Agent",
+  waivers: "Waivers",
+  unknown: "Unknown",
+};
+
 export const NEED_SEVERITY_LABELS: Record<"low" | "medium" | "high", string> = {
   high: "High Need",
   medium: "Moderate Need",

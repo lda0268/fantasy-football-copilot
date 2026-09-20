@@ -17,7 +17,7 @@ export type LeaguePlayerFilters = {
   count: number;
   position?: FantasyPosition;
   search?: string;
-  status?: "FA";
+  status?: "FA" | "W" | "T";
 };
 
 function invalidRequest(message: string): YahooApiError {
@@ -65,12 +65,22 @@ export function buildFreeAgentResource(options: {
   count: number;
   position?: FantasyPosition;
 }): string {
+  return buildPlayersByStatusResource({ ...options, status: "FA" });
+}
+
+export function buildPlayersByStatusResource(options: {
+  leagueKey: string;
+  start: number;
+  count: number;
+  position?: FantasyPosition;
+  status: NonNullable<LeaguePlayerFilters["status"]>;
+}): string {
   return buildLeaguePlayersResource({
     leagueKey: options.leagueKey,
     start: options.start,
     count: options.count,
     position: options.position,
-    status: "FA",
+    status: options.status,
   });
 }
 

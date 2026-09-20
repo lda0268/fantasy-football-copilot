@@ -5,6 +5,15 @@ import type { StartSitAssignment, StartSitLineupPlayer, StartSitResult } from ".
 import { StartSitPage } from "./StartSitPage";
 import type { StartSitPageData } from "./loadStartSit";
 
+vi.mock("./loadPlayers", () => ({
+  loadPlayers: vi.fn(async () => ({
+    yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },
+    fantasyProsStatus: { configured: true, mode: "fixture" },
+    leagues: [],
+    players: [],
+  })),
+}));
+
 vi.mock("./loadDashboard", () => ({
   loadDashboard: vi.fn(async () => ({
     yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },

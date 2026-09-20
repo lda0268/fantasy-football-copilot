@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { YahooApiError, YahooErrorCode } from "./errors.js";
-import { assertSearchQuery, buildFreeAgentResource, buildLeagueSettingsResource, buildPlayerSearchResource } from "./resources.js";
+import { assertSearchQuery, buildFreeAgentResource, buildLeagueSettingsResource, buildPlayerSearchResource, buildPlayersByStatusResource } from "./resources.js";
 
 describe("Yahoo player resource builders", () => {
   it("encodes leagueKey, status=FA, start, and count", () => {
@@ -41,6 +41,17 @@ describe("Yahoo player resource builders", () => {
         count: 25,
       }),
       "league/999.l.123456/players;position=WR;search=nico%20vale;start=0;count=25",
+    );
+  });
+
+  it("encodes waiver and taken status filters", () => {
+    assert.equal(
+      buildPlayersByStatusResource({ leagueKey: "999.l.123456", start: 0, count: 25, status: "W" }),
+      "league/999.l.123456/players;status=W;start=0;count=25",
+    );
+    assert.equal(
+      buildPlayersByStatusResource({ leagueKey: "999.l.123456", start: 25, count: 25, status: "T" }),
+      "league/999.l.123456/players;status=T;start=25;count=25",
     );
   });
 

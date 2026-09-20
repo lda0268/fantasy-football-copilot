@@ -6,6 +6,15 @@ import type { CopilotRecommendation, PlayerIntelligence } from "../api/types";
 import { DashboardPage } from "./DashboardPage";
 import type { DashboardData } from "./loadDashboard";
 
+vi.mock("./loadPlayers", () => ({
+  loadPlayers: vi.fn(async () => ({
+    yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },
+    fantasyProsStatus: { configured: true, mode: "fixture" },
+    leagues: [],
+    players: [],
+  })),
+}));
+
 vi.mock("./loadMyTeam", () => ({
   loadMyTeam: vi.fn(async () => ({
     yahooStatus: { connected: true, fantasyAuthorized: false, mode: "fixture", expiresAt: null },

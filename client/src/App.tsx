@@ -4,6 +4,7 @@ import { usePathname } from "./app/usePathname";
 import { DashboardPage } from "./season/DashboardPage";
 import { MyTeamPage } from "./season/MyTeamPage";
 import { PlaceholderPage } from "./season/PlaceholderPage";
+import { PlayersPage } from "./season/PlayersPage";
 import { SeasonLayout } from "./season/SeasonLayout";
 import { StartSitPage } from "./season/StartSitPage";
 import { WaiverWirePage } from "./season/WaiverWirePage";
@@ -11,7 +12,6 @@ import "./styles/draft.css";
 import "./styles/season.css";
 
 const PLACEHOLDERS: Record<string, string> = {
-  [ROUTES.players]: "Players",
   [ROUTES.league]: "League",
   [ROUTES.settings]: "Settings",
 };
@@ -34,6 +34,8 @@ export default function App() {
         <MyTeamPage navigate={navigate} />
       ) : path === ROUTES.startSit ? (
         <StartSitPage />
+      ) : path === ROUTES.players ? (
+        <PlayersPage navigate={navigate} />
       ) : placeholder ? (
         <PlaceholderPage title={placeholder} navigate={navigate} />
       ) : (

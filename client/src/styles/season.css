@@ -114,6 +114,11 @@ body,
   margin-bottom: 12px;
 }
 
+.dash-header > div:first-child {
+  flex: 1 1 280px;
+  min-width: 240px;
+}
+
 .dash-header h1 {
   margin: 0;
   font-size: 24px;
@@ -141,7 +146,7 @@ body,
   flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-end;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 }
 
 .provider-chip,
@@ -817,6 +822,7 @@ body,
   border-top: 1px solid var(--season-border);
 }
 
+.player-detail h3,
 .player-detail h4 {
   margin: 12px 0 8px;
   font-size: 12px;
@@ -1025,6 +1031,62 @@ body,
 
 .start-sit-mini {
   width: 100%;
+}
+
+.players-page .panel-card {
+  margin-bottom: 12px;
+}
+
+.players-filters {
+  margin-bottom: 12px;
+  align-items: end;
+}
+
+.players-search {
+  flex: 1 1 280px;
+}
+
+.players-search input {
+  font-size: 16px;
+  min-height: 42px;
+  padding: 8px 12px;
+}
+
+.players-table {
+  width: 100%;
+  font-size: 13px;
+}
+
+.players-table th,
+.players-table td {
+  padding: 6px 8px;
+  white-space: nowrap;
+}
+
+.players-table .player-name {
+  white-space: normal;
+  max-width: 14rem;
+}
+
+.sort-btn {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.sort-btn.is-active {
+  color: #d7e8fb;
+}
+
+.sort-dir {
+  color: var(--season-accent);
+  font-size: 11px;
 }
 
 @media (max-width: 1100px) {
