@@ -1,6 +1,7 @@
 import { DraftRoom } from "./components/DraftRoom";
 import { ROUTES } from "./app/routes";
 import { usePathname } from "./app/usePathname";
+import { ComparePage } from "./season/ComparePage";
 import { DashboardPage } from "./season/DashboardPage";
 import { LeaguePage } from "./season/LeaguePage";
 import { MatchupPage } from "./season/MatchupPage";
@@ -18,7 +19,7 @@ const PLACEHOLDERS: Record<string, string> = {
 };
 
 export default function App() {
-  const { path, navigate } = usePathname();
+  const { path, search, navigate } = usePathname();
 
   if (path === ROUTES.draft) {
     return <DraftRoom />;
@@ -39,6 +40,8 @@ export default function App() {
         <MatchupPage navigate={navigate} />
       ) : path === ROUTES.players ? (
         <PlayersPage navigate={navigate} />
+      ) : path === ROUTES.compare ? (
+        <ComparePage navigate={navigate} search={search} />
       ) : path === ROUTES.league ? (
         <LeaguePage navigate={navigate} />
       ) : placeholder ? (

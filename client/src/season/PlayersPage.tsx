@@ -400,6 +400,18 @@ function PlayerResearchPanel({ player, navigate }: { player: PlayerIntelligence;
           </a>
         </p>
       ) : null}
+      <p>
+        <a
+          className="text-link"
+          href={`${ROUTES.compare}?player=${encodeURIComponent(player.identity.yahooPlayerKey)}`}
+          onClick={(event) => {
+            event.preventDefault();
+            navigate(`${ROUTES.compare}?player=${encodeURIComponent(player.identity.yahooPlayerKey)}`);
+          }}
+        >
+          Compare
+        </a>
+      </p>
       <h3>This week</h3>
       <dl className="intel-grid">
         <div>
